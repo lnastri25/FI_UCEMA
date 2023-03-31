@@ -1,0 +1,4 @@
+Python tiene la capacidad de acceder y realizar operaciones de lectura/escritura sobre los documentos localizados en un sistema de archivos
+Los sistemas UNIX, MacOS X y GNU/Linux se basan en la premisa de que todo es un archivo o un directorio, por lo que es común acceder a flujos de datos del dispositivos y/o procesos como si se accediera a un archivo binario. En los sistemas operativos de Windows sin embargo esta premisa no se cumple.
+Para Python existen dos tipos de archivos: de texto o binarios. Estos se manipulan de modos distintos. Los archivos de texto están formados por una secuencia de líneas, donde cada línea incluye una secuencia de carácteres. Típicamente, cada línea finaliza con el carácter especial de fin de linea (EOL). Si bien existen distintos tipos de carácteres de fin de línea, el más común es (\n)
+Un archivo binario es cualquier tipo de archivo que no es un archivo de texto. Estos solo pueden ser interpretados o leídos por aplicaciones.
