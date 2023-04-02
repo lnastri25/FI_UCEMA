@@ -32,6 +32,12 @@ leer_imprimir ("tejer.txt", 4)
 # Ejercicio 3 # 
 # Escribí un programa que lea un archivo, guarde las líneas del archivo en una lista y luego imprima las n últimas.
 
+def leer_imprimir_ultimas (archivo, primeras_lineas):
+    linea = open("tejer.txt", "r").readlines()[-primeras_lineas:] # Se utiliza para obtener las últimas líneas del archivo de texto
+    print(linea) # Sin el asterico la impirme como una lista 
+
+leer_imprimir_ultimas("tejer.txt", 4)
+
 # Ejercicio 4 #
 # Hacé un programa que lea un archivo, cuente la cantidad de palabras del archivo y luego imprima el resultado.
 
