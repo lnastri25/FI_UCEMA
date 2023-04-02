@@ -41,6 +41,13 @@ leer_imprimir_ultimas("tejer.txt", 4)
 # Ejercicio 4 #
 # Hacé un programa que lea un archivo, cuente la cantidad de palabras del archivo y luego imprima el resultado.
 
+def contar_palabras(archivo):
+    file = open(archivo,'r')        #opern, read, split
+    leer = file.read()
+    dividir = leer.split()  # Use split para descomponer el string en palabras; se asume que los delimitadores son espacios de caracteres en blanco.
+    print('El archivo tiene', len(dividir), 'palabras')
+contar_palabras('tejer.txt')
+
 # Ejercicio 5 #
 # Escribí un programa que lea un archivo, reemplace una letra por esa misma letra más un salto de línea y lo guarde en otro archivo.
 
