@@ -42,7 +42,7 @@ leer_imprimir_ultimas("tejer.txt", 4)
 # Hacé un programa que lea un archivo, cuente la cantidad de palabras del archivo y luego imprima el resultado.
 
 def contar_palabras(archivo):
-    file = open(archivo,'r')        #opern, read, split
+    file = open(archivo,'r')        #open, read, split
     leer = file.read()
     dividir = leer.split()  # Use split para descomponer el string en palabras; se asume que los delimitadores son espacios de caracteres en blanco.
     print('El archivo tiene', len(dividir), 'palabras')
@@ -51,6 +51,12 @@ contar_palabras('tejer.txt')
 # Ejercicio 5 #
 # Escribí un programa que lea un archivo, reemplace una letra por esa misma letra más un salto de línea y lo guarde en otro archivo.
 
+def reemplazar(entrada, salida, letra):
+    with open(entrada, 'r') as file, open(salida, 'w') as file2:
+        for line in file:
+            file2.write(line.replace(letra, letra + '\n'))  #Reemplazo y lo escribo en el nuevo archivo
+    reemplazar('texto1.txt', 'texto2.txt', 'n')
+    
 # Ejercicio 6 #
 # Realizá un programa que lea un archivo, elimine todos los saltos de línea y lo guarde en otro archivo.
 
