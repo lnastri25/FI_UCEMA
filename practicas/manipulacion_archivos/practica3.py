@@ -60,8 +60,30 @@ def reemplazar(entrada, salida, letra):
 # Ejercicio 6 #
 # Realizá un programa que lea un archivo, elimine todos los saltos de línea y lo guarde en otro archivo.
 
+def sin_saltos(entrada, salida):
+    with open(entrada, 'r') as file, open(salida, 'w') as file2:
+        for letra in file.read():
+            if letra == '\n':
+                pass
+            else:
+                file2.write(letra)
+sin_saltos('texto1.txt', 'texto2.txt')
+
 # Ejercicio 7 #
 # Escribí un porgrama que lea un archivo e identifique la palabra más larga, la cual debe imprimir y decir cuantos caracteres tiene.
+
+def palabra_larga(archivo):
+    file = open(archivo,'r') # abro
+    leer = file.read()       # leo
+    dividir = leer.split()   # separa en palabras
+    larga = ''               # El espacio es 1 caracter
+    for palabra in dividir:
+        if len(palabra) > len(larga):
+            larga = palabra
+    print('La palabra mas larga es', larga, 'con', len(larga), 'letras')
+
+palabra_larga('tejer.txt')
+
 
 # Ejercicio 8 #
 # Escribí un programa que abra dos documentos y guarde el contenido de ambos en un otro documento ya existente.
