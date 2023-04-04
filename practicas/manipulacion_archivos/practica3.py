@@ -94,7 +94,24 @@ def unir_archivos(archivo1, archivo2, archivo3):
 unir_archivos('texto1.txt', 'texto2.txt', 'texto3.txt')  
 
 # Ejercicio 9 #
-# Realizá un programa que lea un archivo y obtenga la frecuencia de cada palabra que hay en el archivo. Recordá que la frecuencia es la relación entre número de veces que aparece la palabra en cuestión con respecto a la cantidad total de palabras.
+# Realizá un programa que lea un archivo y obtenga la frecuencia de cada palabra que hay en el archivo. 
+# Recordá que la frecuencia es la relación entre número de veces que aparece la palabra en cuestión con respecto a la cantidad total de palabras.
+
+def frecuencia_palabras(archivo):
+    file = open(archivo,'r') # abro
+    leer = file.read()       # leo
+    dividir = leer.split()   # separa en palabras
+    diccionario = {}
+    for palabra in dividir:
+        if palabra in diccionario:
+            diccionario[palabra] += 1
+        else:
+            diccionario[palabra] = 1
+    print(diccionario)
+frecuencia_palabras('tejer.txt')
 
 # Ejercicio 10 #
-# Escribí un programa que lea todos los archivos .txt de una carpeta dada (Carpeta1) y los añada a un archivo dentro de la carpeta Resultado, que a su vez se tiene que encontrar dentro de Carpeta1.
+# Escribí un programa que lea todos los archivos .txt de una carpeta dada (Carpeta1) y los añada a un archivo dentro de la carpeta Resultado, 
+# que a su vez se tiene que encontrar dentro de Carpeta1.
+
+
