@@ -88,6 +88,11 @@ palabra_larga('tejer.txt')
 # Ejercicio 8 #
 # Escribí un programa que abra dos documentos y guarde el contenido de ambos en un otro documento ya existente.
 
+def unir_archivos(archivo1, archivo2, archivo3):
+    with open(archivo1, 'r') as mi_arch1, open(archivo2, 'r') as mi_arch2, open(archivo3, 'w') as mi_arch3:
+        mi_arch3.write(mi_arch1.read() + mi_arch2.read())
+unir_archivos('texto1.txt', 'texto2.txt', 'texto3.txt')  
+
 # Ejercicio 9 #
 # Realizá un programa que lea un archivo y obtenga la frecuencia de cada palabra que hay en el archivo. Recordá que la frecuencia es la relación entre número de veces que aparece la palabra en cuestión con respecto a la cantidad total de palabras.
 
