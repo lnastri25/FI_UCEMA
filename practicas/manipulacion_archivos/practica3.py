@@ -84,7 +84,6 @@ def palabra_larga(archivo):
 
 palabra_larga('tejer.txt')
 
-
 # Ejercicio 8 #
 # Escribí un programa que abra dos documentos y guarde el contenido de ambos en un otro documento ya existente.
 
@@ -113,5 +112,3 @@ frecuencia_palabras('tejer.txt')
 # Ejercicio 10 #
 # Escribí un programa que lea todos los archivos .txt de una carpeta dada (Carpeta1) y los añada a un archivo dentro de la carpeta Resultado, 
 # que a su vez se tiene que encontrar dentro de Carpeta1.
-
-
