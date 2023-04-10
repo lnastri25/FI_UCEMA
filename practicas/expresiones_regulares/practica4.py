@@ -1,7 +1,18 @@
 #!/bin/python3
 
+"https://github.com/AJVelezRueda/Fundamentos_de_informatica/blob/master/Python_intro/Practicas/Pr%C3%A1ctica_Expresiones_regulares.md"
+
+## GUÍA 4: EXPRESIONES REGULARES ## 
+
+import re
+
 # Ejercicio 1 #
-# Escribí un programa que verifique si un string tiene al menos un carácter permitido. Estos caracteres son a-z, A-Z y 0-9.
+# Escribí una funcion que verifique si un string tiene al menos un carácter permitido. Estos caracteres son a-z, A-Z y 0-9.
+
+def caracteres_permitidos(string):
+    return bool(re.search("[a-zA-Z0-9]",string))
+
+print(caracteres_permitidos("ABCDEaaa1234"))
 
 # Ejercicio 2 #
 # Escribí un programa que verifique si un string tiene todos sus caracteres permitidos. Estos caracteres son a-z, A-Z y 0-9.
