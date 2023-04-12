@@ -160,11 +160,65 @@ dos_P(lista)
 # Ejercicio 12 #
 # Escribí un programa que reemplace todas las ocurrencias de espacios, guiones bajos y dos puntos por la barra vertical (|).
 
+def reemplazar(texto):
+    return re.sub(r'[\s_:]', '|', texto)
+
+texto = "Este_es un:ejemplo de texto con espacios_ guiones_bajos:y dos:puntos"
+
+texto_reemplazado = reemplazar(texto)
+
+print(texto_reemplazado)
+
 # Ejercicio 13 #
 # Escribí un programa que reemplace los dos primeros caracteres no alfanúmericos por guiones bajos.
+
+def reemplazar_dos(string):
+    reemplazado = re.sub('[\W]{2,}', '_', string)
+    print(reemplazado)
+reemplazar_dos('$$Lorenzo')
 
 # Ejercicio 14 #
 # Realizá un programa que reemplace los espacios y tabulaciones por punto y coma.
 
+def reemplazar_espacios(string):
+    return re.sub(r'[ \t]+', ';', string) # "sub" se utiliza para reemplazar todas las ocurrencias de una expresión regular 
+                                          # específica en una cadena de texto con un valor determinado.
+
+texto = "Hola        Lorenzo. ¿Cómo;     estás?"
+texto_sin_espacios_tabs = reemplazar_espacios(texto)
+
+print(texto_sin_espacios_tabs)
+
+# [ \t]+: representa uno o más espacios o tabulaciones seguidas. 
+# Este patrón se utilizará para encontrar todas las ocurrencias de este tipo de caracteres en la cadena de texto.
+
+# ; : es el valor que se utilizará para reemplazar todas las ocurrencias de la expresión regular en la cadena de texto. 
+# En este caso, el valor utilizado es ";", lo que significa que todas las ocurrencias de espacios o tabulaciones en la cadena de texto serán reemplazadas por puntos y comas.
+
 # Ejercicio 15 #
 # Realizá un programa que validar si una cuenta de mail está escrita correctamente.
+
+def validar_email(email):
+    patron = r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+    if re.match(patron, email):
+        return "El mail está correctamente escrito"
+    else:
+        return "No está correctamente escrito"
+
+print(validar_email('lorenzonastri@gmail.com'))
+
+
+# r: significa que cualquier carácter especial contenido en la cadena se interpreta literalmente. (raw string)
+
+# ^: indica el inicio de línea
+
+# [a-zA-Z0-9._%+-]+: representa el nombre del usuario de la dirección de correo electrónico, 
+# el cual debe estar conformado por uno o más caracteres alfanuméricos, puntos, guiones bajos, porcentajes, más y guiones.
+
+# @: se utiliza para separar el nombre del usuario de la dirección de correo electrónico del dominio.
+
+# [a-zA-Z0-9.-]+: especifica el dominio del correo electrónico, puede estar conformado por uno o más caracteres alfanuméricos, puntos y guiones.
+
+# \.: indica que debe haber un punto.
+
+# [a-zA-Z]{2,}: especifica la extensión de la dirección de correo electrónico, la cual debe estar conformada por dos o más caracteres alfabéticos.
