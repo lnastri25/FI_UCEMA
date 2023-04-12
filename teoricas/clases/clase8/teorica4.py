@@ -59,6 +59,7 @@ print(re.sub(patron, "###", texto)) # Reemplaza ipsum por ###
 
 ## re.search(pattern, string, flags=0) ##
 # Examina a través de la string («cadena») buscando el primer lugar donde el pattern («patrón») de la expresión regular produce una coincidencia, y retorna un objeto match correspondiente. Retorna None si ninguna posición en la cadena coincide con el patrón; notar que esto es diferente a encontrar una coincidencia de longitud cero en algún punto de la cadena.
+# De por sí no devuelve nada. Devuelve 'None' y por eso usamos bool.
 
 ## re.match(pattern, string, flags=0) ##
 # Si cero o más caracteres al principio de la string («cadena») coinciden con el pattern («patrón») de la expresión regular, retorna un objeto match correspondiente. Retorna None si la cadena no coincide con el patrón; notar que esto es diferente de una coincidencia de longitud cero.
