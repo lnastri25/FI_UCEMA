@@ -112,3 +112,13 @@ frecuencia_palabras('tejer.txt')
 # Ejercicio 10 #
 # Escribí un programa que lea todos los archivos .txt de una carpeta dada (Carpeta1) y los añada a un archivo dentro de la carpeta Resultado, 
 # que a su vez se tiene que encontrar dentro de Carpeta1.
+
+def unir_txt(Carpeta1, nombre):
+    os.chdir(Carpeta1)               # Cambiamos de directorio a la Carpeta 1
+    textos = glob.glob('*.txt')      # Busco todos los txt y armo una lista automatica
+    os.mkdir('Resuelto')            # Creo un directorio en la capeta donde estoy
+    with open('Resuelto/' + nombre, 'a') as salida: # Tengo que poner resuelto/ para que se dirija hacia alla.
+        for archivo in textos:
+            with open(archivo, 'r') as texto:
+                salida.write(texto.read() + '\n')
+unir_txt('Carpeta1', 'archivo2.txt')
