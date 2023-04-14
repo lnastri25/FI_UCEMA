@@ -104,8 +104,9 @@ class "Nombre de la clase" (siempre en mayúscula):
 
 """
 1) La diferencia entre un método y una funcion es que la funcion no esta dentro de una clase. 
- El metodo (es como una función), pero forma parte de la clase
- 
+ El metodo (es como una función), pero forma parte de la clase.
+ Un método es, entonces, la descripción de qué hacer cuando se recibe un mensaje del mismo nombre. El conjunto de estos métodos provee de comportamiento a las instancias de una clase.
+
 2) las funciones retornan un valor mientras que los procedimientos tienen un efecto, es decir, modifican algo.
 """
 
@@ -120,3 +121,14 @@ print("Parte 3:", roberta.esta_feliz())
 # Gracias a is pudimos vertificar que batman, bruno_diaz y bruce_wayne son idénticos, es decir, tienen la misma identidad. Lo mismo sucede con clark_kent y superman.
 
 # De todas formas, en la mayoría de los casos para comparar dos objetos nos alcanza con el operador de equivalencia visto antes en este recorrido, el ya conocido ==
+
+# Para conocer el estado de un objeto, podemos acceder a cada uno de sus atributos escribiendo objeto.atributo, habrás notado que, a diferencia de cuando envíamos un mensaje, al acceder a un atributo no vamos a usar paréntesis.
+
+"""
+1) __init__ viene de la palabra en inglés initialize que en castellano es inicializar. Es lo que se conoce como el constructor de una clase y nos permite darle valores iniciales a los atributos de sus instancias a la hora de crearlas. 
+
+__init__ también es un método, pero recordá que solo sirve para darle un valor inicial a los atributos de las instancias cuando las creamos. 
+
+2) Por su parte, self(que en castellano sería algo así como yo) es un primer parámetro obligatorio que nos permite acceder a los atributos del objeto que estamos instanciando. Si bien ese parámetro no debe llamarse selfobligatoriamente, es la convención que se utiliza para nombrarlo y la respetaremos a lo largo de todo el recorrido.
+
+"""
