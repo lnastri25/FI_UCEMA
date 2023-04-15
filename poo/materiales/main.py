@@ -131,4 +131,10 @@ __init__ también es un método, pero recordá que solo sirve para darle un valo
 
 2) Por su parte, self(que en castellano sería algo así como yo) es un primer parámetro obligatorio que nos permite acceder a los atributos del objeto que estamos instanciando. Si bien ese parámetro no debe llamarse selfobligatoriamente, es la convención que se utiliza para nombrarlo y la respetaremos a lo largo de todo el recorrido.
 
+3) Cuando lanzamos una excepción provocamos un error explícito que interrumpe el flujo de nuestro programa.
+
+La excepción no solo aborta el método en el cual se produce sino también la ejecución de todos los métodos de la cadena de envío de mensajes y los posteriores, pero cuidado, porque no se descartan los cambios realizados anteriormente en caso de que los hubiera.
+
+ej: raise Exception("string) --> suele venir después de un else.
+
 """
