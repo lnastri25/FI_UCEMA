@@ -252,6 +252,25 @@ def estaDebil(self):
 # Ejercicio 2 #
 # Modificar la clase Golondrina vista en la teoría para poder preguntar si una golondrina está en equilibrio. Este equilibrio se alcanza cuando la energía se encuentra entre 150 y 300.
 
+class Golondrina:
+  def __init__(self, energia):
+    self.energia = energia
+
+  def comer_alpiste(self, gramos):
+    self.energia += 4 * gramos
+
+  def volar_en_circulos(self):
+    self.volar(0)
+
+  def volar(self, kms):
+    self.energia -= 10 + kms
+
+  def esta_feliz(self):
+    return self.energia > 50
+  
+  def esta_en_equilibrio(self):
+    return 150 <= self.energia <= 300
+
 # Ejercicio 3 #
 # Consideremos que un ornitólogo tiene un conjunto de aves bajo estudio. Cada una de estas aves puede ser un gorrión (del ejercicio 7 de la práctica anterior), o una golondrina. Un ornitólogo somete, cada vez que lo decide, a cada una de las aves que tiene en estudio a una rutina que consiste en: hacerla comer 80 gramos, hacerla volar 70 kms, y finalmente hacerla comer otros 10 gramos. Se propone:
 
@@ -264,7 +283,7 @@ def estaDebil(self):
 # decirle al ornitólogo que estudie una de las golondrinas y los dos gorriones,
 # decirle al ornitólogo que realice su rutina sobre aves,
 # verificar los valores de las cuatro aves definidas, para las tres que tiene en estudio el ornitólogo estos valores deberían haber cambiado, para la otra ave no.
-
+    
 # Ejercicio 4 #
 # Vamos a salir de paseo (¡si la pandemia nos deja!). Para esto podemos utilizar como vehículos motos o autos, y de estos dos medios de transporte sabemos que:
 
@@ -279,3 +298,42 @@ def estaDebil(self):
 # saben responder si entran una cantidad de personas. Esto sucede cuando esa cantidad es menor o igual al máximo que pueden llevar.
 
 # Definí las clases Moto, Auto y MedioDeTransporte y hace que las dos primeras hereden de la tercera.
+
+class Moto:
+    def __init__(self, combustible):
+        self.combustible = combustible
+
+    def cargar_combustible(self, litros):
+        self.combustible += litros
+
+    def recorrer(self, kms):
+        self.combustible -= kms
+
+    def entran(self, personas):
+        return personas <= 2
+    
+class Auto:
+    def __init__(self, combustible):
+        self.combustible = combustible
+
+    def cargar_combustible(self, litros):
+        self.combustible += litros
+
+    def recorrer(self, kms):
+        self.combustible -= kms / 2
+
+    def entran(self, personas):
+        return personas <= 5
+    
+class MedioDeTransporte:
+    def __init__(self, combustible):
+        self.combustible = combustible
+
+    def cargar_combustible(self, litros):
+        self.combustible += litros
+
+    def recorrer(self, kms):
+        self.combustible -= kms
+
+    def entran(self, personas):
+        return personas <= 5
