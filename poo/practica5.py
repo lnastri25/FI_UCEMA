@@ -184,3 +184,98 @@ calculadora.valorActual()
 
 # Ejercicio 7 #
 # Definí una clase de gorriones, de los cuales nos interesa conocer dos medidas conocidas como CSS (coeficiente de serenidad silenciosa), CSSP y CSSV (como el CSS pero “pico” y “veces”). El CSS resulta de dividir la cantidad total de kilómetros que vuela desde que se lo comienza a estudiar, por la cantidad total de gramos de comida que ingiere. El CSSP es la misma división pero considerando solamente lo que voló la vez que más voló y lo que comió la vez que más comió. El CSSV es otra vez la misma idea, respecto de la cantidad de veces que voló y comió. Si un gorrión nunca comió, los coeficientes deben ser None. Un gorrión se considera en equilibrio si su CSS está entre 0.5 y 2.
+
+
+"https://github.com/AJVelezRueda/Fundamentos_de_informatica/blob/master/POO/Practica/Pr%C3%A1ctica_Objetos_Parte_2.md"
+
+## GUÍA 5: PRACTICA POO PARTE 2 ##
+
+# Ejercicio 1 #
+# Dadas las siguientes clases responder:
+
+# cuales son sus estados
+
+# cuales son sus interfaces
+
+# ¿Comparten interfaz?
+
+# ¿Son polimórficas?
+
+class Perro:
+    def __init__(self):
+        self.alimento = 0
+        self.caricias = 0
+
+    def energia(self):
+        return self.alimento + (self.caricias * 10)
+
+    def comer(self, gramos):
+        self.alimento += gramos
+
+    def alimento(self):
+	    print(self.alimento)
+
+def acariciar(self):
+        self.caricias += 1
+
+def estaDebil(self):
+        return self._caricias < 2
+
+def pasear(self, km):
+	    self.alimento -= km / 4
+
+class Gato:
+    def __init__(self):
+        self.alimento = 0
+        self.caricias = 0
+
+    def energia(self):
+        return self.alimento + (self.caricias * 8)
+
+    def comer(self, gramos):
+        self.alimento += gramos * 1.5
+
+    def caricias(self):
+	    print(self.caricias)
+
+def acariciar(self):
+    self.caricias += 1
+
+def estaDebil(self):
+    return self._caricias < 4
+    
+    # Los estados son alimento y caricias.
+    # Las interfaces son: energia(), comer(), caricias(), acariciar(), estaDebil() y pasear(). --> los métodos que entienden.
+    # Comparten parte de su interfaz. --> Poliformismo parcial.
+    # Para decir que son polimorficas necesitamos una tercer clase que use a las 2.
+    
+# Ejercicio 2 #
+# Modificar la clase Golondrina vista en la teoría para poder preguntar si una golondrina está en equilibrio. Este equilibrio se alcanza cuando la energía se encuentra entre 150 y 300.
+
+# Ejercicio 3 #
+# Consideremos que un ornitólogo tiene un conjunto de aves bajo estudio. Cada una de estas aves puede ser un gorrión (del ejercicio 7 de la práctica anterior), o una golondrina. Un ornitólogo somete, cada vez que lo decide, a cada una de las aves que tiene en estudio a una rutina que consiste en: hacerla comer 80 gramos, hacerla volar 70 kms, y finalmente hacerla comer otros 10 gramos. Se propone:
+
+# implementar la clase Ornitologo, de forma tal que acepte las operaciones estudiarAve(ave), avesEnEstudio(), realizarRutinaSobreAves(), avesEnEquilibrio(). Realizar rutina es ejecutar la rutina descripta más arriba sobre cada ave que tiene en estudio. Las aves en equilibrio son aquellas aves, entre las que el ornitólogo tiene en estudio, que responden True cuando se les consulta estaEnEquilibrio().
+
+# comprobar el código que se escribió con esta secuencia:
+
+# definir un ornitólogo, dos golondrinas y dos gorriones,
+# inicializar las aves con valores conocidos,
+# decirle al ornitólogo que estudie una de las golondrinas y los dos gorriones,
+# decirle al ornitólogo que realice su rutina sobre aves,
+# verificar los valores de las cuatro aves definidas, para las tres que tiene en estudio el ornitólogo estos valores deberían haber cambiado, para la otra ave no.
+
+# Ejercicio 4 #
+# Vamos a salir de paseo (¡si la pandemia nos deja!). Para esto podemos utilizar como vehículos motos o autos, y de estos dos medios de transporte sabemos que:
+
+# comienzan con una cantidad que podemos establecer de combustible
+
+# los autos pueden llevar 5 personas como máximo y al recorrer una distancia consumen medio litro de combustible por cada kilómetro recorrido
+
+# las motos pueden llevar 2 personas y consumen un litro por kilómetro recorrido;
+
+# pueden cargar_combustible en la cantidad que digamos y al hacerlo suben su cantidad de combustible
+
+# saben responder si entran una cantidad de personas. Esto sucede cuando esa cantidad es menor o igual al máximo que pueden llevar.
+
+# Definí las clases Moto, Auto y MedioDeTransporte y hace que las dos primeras hereden de la tercera.
