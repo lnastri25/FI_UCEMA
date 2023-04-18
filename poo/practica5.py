@@ -26,7 +26,8 @@ class Perro:
     def estaDebil(self):
         return self._caricias < 2
     
-    # La interfaz son los metodos que entiende la clase (energia, comer, acariciar, estaDebil) y el estado son los atributos (alimento y caricias)
+    # La interfaz son los metodos que entiende la clase (energia, comer, acariciar, estaDebil) 
+    # El estado son los atributos (alimento y caricias)
     
 # Ejercicio 2 #
 # Modificá el método volar de la clase Golondrina visto en la clase de teoría de manera que no pueda volar si al hacerlo la energía toma el valor 0 o valor negativo.
@@ -184,9 +185,8 @@ calculadora.valorActual()
 
 # Ejercicio 7 #
 # Definí una clase de gorriones, de los cuales nos interesa conocer dos medidas conocidas como CSS (coeficiente de serenidad silenciosa), CSSP y CSSV (como el CSS pero “pico” y “veces”). El CSS resulta de dividir la cantidad total de kilómetros que vuela desde que se lo comienza a estudiar, por la cantidad total de gramos de comida que ingiere. El CSSP es la misma división pero considerando solamente lo que voló la vez que más voló y lo que comió la vez que más comió. El CSSV es otra vez la misma idea, respecto de la cantidad de veces que voló y comió. Si un gorrión nunca comió, los coeficientes deben ser None. Un gorrión se considera en equilibrio si su CSS está entre 0.5 y 2.
-
-
-"https://github.com/AJVelezRueda/Fundamentos_de_informatica/blob/master/POO/Practica/Pr%C3%A1ctica_Objetos_Parte_2.md"
+    
+"https://github.com/AJVelezRueda/Fundamentos_de_informatica/blob/master/POO/Practica/Pr%C3%A1ctica_Objetos_Parte_2.md" # --> GitHub
 
 ## GUÍA 5: PRACTICA POO PARTE 2 ##
 
@@ -247,7 +247,7 @@ def estaDebil(self):
     # Los estados son alimento y caricias.
     # Las interfaces son: energia(), comer(), caricias(), acariciar(), estaDebil() y pasear(). --> los métodos que entienden.
     # Comparten parte de su interfaz. --> Poliformismo parcial.
-    # Para decir que son polimorficas necesitamos una tercer clase que use a las 2.
+    # Para decir que son polimórficas necesitamos una tercer clase que use a las 2.
     
 # Ejercicio 2 #
 # Modificar la clase Golondrina vista en la teoría para poder preguntar si una golondrina está en equilibrio. Este equilibrio se alcanza cuando la energía se encuentra entre 150 y 300.
