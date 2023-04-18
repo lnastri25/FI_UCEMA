@@ -381,24 +381,47 @@ class Chef:
 # Si el objeto es una instancia de la clase Pasta, entonces se puede aumentar o disminuir la cantidad de ajíes. 
 # Si es una instancia de la clase Pizza, entonces se puede cambiar el condimento.
 
+class Chef:
+  def __init__ (self, plato_del_dia):
+    self.plato_del_dia = plato_del_dia
+  
+  def picantear (self):
+    if self.plato_del_dia.muy_picante():
+      raise Exception ("El plato ya está demasiado picante")
+    else:
+      self.plato_del_dia.picante()
+
+    
 class AyudanteDeCocina:
-    def suavizar(self, plato):
-        if isinstance(plato, Pasta) and plato.ajies > 0:
-            plato.ajies -= 1
-            return plato
-        elif isinstance(plato, Pizza):
-            plato.condimento = "orégano"
-            return plato
-        else:
-            return plato
-        
-class Pasta:
-    def __init__(self):
-        self.ajies = 0
-        
+  def suavizar (self, plato):
+    plato.suavizar()
+    
 class Pizza:
-    def __init__(self):
-        self.condimento = "adobo"
+  def __init__ (self):
+    self.condimento = "adobo"
+
+  def muy_picante (self):
+    return self.condimento == "cayena"
+    
+  def suavizar(self):
+    self.condimento = "orégano"
+    
+  
+  def picante(self):
+    self.condimento = "cayena"
+    
+class Pasta:
+  def __init__ (self):
+    self.ajies = 0
+   
+  def muy_picante (self):
+    return self.ajies > 10
+    
+  def picante(self):
+      self.ajies += 5
+  
+  def suavizar(self):
+      self.ajies -= 1
         
 """
 
