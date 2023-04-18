@@ -1,7 +1,5 @@
 #!/bin/python3
 
-"https://mumuki.io/fundamentos-informatica-ucema/chapters/682-programacion-con-objetos" # --> Mumuki
-
 "https://github.com/AJVelezRueda/Fundamentos_de_informatica/blob/master/POO/Practica/Pr%C3%A1ctica_POO.md" # --> GitHub
 
 ## GUÍA 5: PRACTICA POO PARTE 1 ##
@@ -337,3 +335,84 @@ class MedioDeTransporte:
 
     def entran(self, personas):
         return personas <= 5
+    
+"https://mumuki.io/fundamentos-informatica-ucema/chapters/682-programacion-con-objetos" # --> Mumuki
+
+# Por suerte el equipo de sobrevivientes pudo frenar el apocalipsis zombi. El problema es que quedaron con hambre, ¡solucionémoslo!
+
+# Para ello cambiemos de escenario y vayamos a un restaurante . En este peculiar restaurante de comida italiana se dan algunos conflictos porque al equipo de chefs les gusta mucho lo picante y a sus ayudantes no tanto. 
+
+## Del equipo de cocina sabemos que:
+
+# cada chef tiene un atributo plato_del_dia;
+# las instancias de Chef pueden picantear ese plato solo si no está demasiado picante, en caso de estarlo arrojan una excepción que dice El plato ya está demasiado picante;
+# las instancias de AyudanteDeCocina no tienen atributos ya que pueden suavizar cualquier plato que reciban como argumento.
+
+## Mientras que de los platos podemos contar lo siguiente:
+
+# las Pastas tienen un atributo ajies que inicialmente es 0;
+# están demasiado picantes cuando tienen más de 10 ajies;
+# al ser picanteadas aumenta en 5 su cantidad de ajies y al ser suavizadas pierden 1. No te preocupes por si al suavizar queda una cantidad negativa de ajies, no vamos a considerar ese escenario;
+# las Pizzas tienen condimento que inicialmente es "adobo";
+# se considera que una pizza está demasiado picante si su condimento es "cayena";
+# al suavizar una pizza su condimento pasa a ser "orégano" y al picantearla, "cayena".
+# Los constructores en ambos platos solo deben tener self como parámetro porque sus atributos siempre se inicializan con el mismo valor. 
+
+# Definí las clases necesarias para poder hacer lo siguiente:
+
+class Chef:
+    def __init__(self, plato):
+        self.plato_del_dia = plato
+    
+    def picantear(self):
+        if isinstance(self.plato_del_dia, Pasta):
+            if self.plato_del_dia.ajies <= 10:
+                self.plato_del_dia.ajies += 5
+                return self.plato_del_dia
+            else:
+                raise Exception("El plato ya está demasiado picante")
+        else:
+            self.plato_del_dia.condimento = "cayena"
+            return self.plato_del_dia
+          
+# isinstance se utiliza para comprobar si un objeto es una instancia de la clase Pasta o de la clase Pizza. 
+# Esto es útil en los métodos picantear y suavizar de las clases Chef y AyudanteDeCocina, respectivamente, 
+# ya que cada uno de estos métodos requiere diferentes acciones en función del tipo de plato que se está manipulando. 
+# Si el objeto es una instancia de la clase Pasta, entonces se puede aumentar o disminuir la cantidad de ajíes. 
+# Si es una instancia de la clase Pizza, entonces se puede cambiar el condimento.
+
+class AyudanteDeCocina:
+    def suavizar(self, plato):
+        if isinstance(plato, Pasta) and plato.ajies > 0:
+            plato.ajies -= 1
+            return plato
+        elif isinstance(plato, Pizza):
+            plato.condimento = "orégano"
+            return plato
+        else:
+            return plato
+        
+class Pasta:
+    def __init__(self):
+        self.ajies = 0
+        
+class Pizza:
+    def __init__(self):
+        self.condimento = "adobo"
+        
+"""
+
+fideos = Pasta()
+muzzarella = Pizza()
+jor = Chef(fideos)
+luchi = AyudanteDeCocina()
+jor.picantear()
+luchi.suavizar(fideos)
+jor.plato_del_dia = muzzarella
+luchi.suavizar(muzzarella)
+jor.picantear()
+
+"""
+
+# ¡Dame una pista!
+# Al definir las clases Pasta y Pizza tenés la libertad de elegir cómo hacer para picantear, suavizar o saber si están demasiado picantes. ¡Pero recordá que es importante delegar adecuadamente! 
