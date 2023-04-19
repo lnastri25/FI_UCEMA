@@ -25,7 +25,7 @@ class Perro:
         return self._caricias < 2
     
     # La interfaz son los metodos que entiende la clase (energia, comer, acariciar, estaDebil) 
-    # El estado son los atributos (alimento y caricias)
+    # El estado son los atributos (self.alimento y self.caricias)
     
 # Ejercicio 2 #
 # Modificá el método volar de la clase Golondrina visto en la clase de teoría de manera que no pueda volar si al hacerlo la energía toma el valor 0 o valor negativo.
@@ -242,7 +242,7 @@ def acariciar(self):
 def estaDebil(self):
     return self._caricias < 4
     
-    # Los estados son alimento y caricias.
+    # Los estados son self.alimento y self.caricias.
     # Las interfaces son: energia(), comer(), caricias(), acariciar(), estaDebil() y pasear(). --> los métodos que entienden.
     # Comparten parte de su interfaz. --> Poliformismo parcial.
     # Para decir que son polimórficas necesitamos una tercer clase que use a las 2.
@@ -439,3 +439,86 @@ jor.picantear()
 
 # ¡Dame una pista!
 # Al definir las clases Pasta y Pizza tenés la libertad de elegir cómo hacer para picantear, suavizar o saber si están demasiado picantes. ¡Pero recordá que es importante delegar adecuadamente! 
+
+## ---------- ## 
+
+# Antes de pasar al siguiente dominio, deberíamos dar el alta a los animales, para que vuelvan a su rutina habitual. 
+
+# Para poder recibir el alta, el animal tiene que estar feliz. Sabemos que:
+
+# los gatos están felices si tienen más de 30 de energia;
+# los caballos siempre están felices;
+# las golondrinas solo están felices cuando están en "Lihuel Calel".
+#Definí en la clase EstudianteDeVeterinaria el método puede_dar_el_alta que reciba a un animal como argumento y nos indique si cumple los requisitos. 
+# Para poder saber eso también es necesario que definas el método esta_feliz en cada clase de animal.
+
+# ¡Dame una pista!
+# No te olvides del return en el método puede_dar_el_alta. 
+
+class EstudianteDeVeterinaria:
+    def alimentar(self, animal, cantidad_gramos):
+        animal.comer(cantidad_gramos)
+        
+    def rehabilitar(self, animal):
+        animal.recibir_rehabilitacion()
+        
+    def puede_dar_el_alta(self,animal):
+        return animal.esta_feliz() # Le estamos dando un mensaje al objeto.
+        
+    
+class Gato:
+  def __init__(self,una_energia, una_edad):
+    self.energia = una_energia
+    self.edad = una_edad
+
+  def comer(self,gramos):
+    self.energia += gramos
+
+  def cumplir_anios(self):
+    self.edad += 1
+    
+  def recibir_rehabilitacion(self):
+    self.comer(400)
+    
+  def esta_feliz(self):
+    return self.energia > 30
+    
+
+
+class Caballo:
+  def __init__(self,una_energia, una_raza):
+    self.energia = una_energia
+    self.raza = una_raza
+
+  def comer(self,gramos):
+    self.energia += gramos * 2
+
+  def galopar(self,kms):
+    self.energia -= kms
+    
+  def recibir_rehabilitacion(self):
+    self.galopar(3)
+    self.comer(3000)
+    self.galopar(5)
+    
+  def esta_feliz(self):
+    return True
+
+class Golondrina:
+  def __init__(self,una_energia, una_ciudad):
+    self.energia = una_energia
+    self.ciudad = una_ciudad
+
+  def comer(self,gramos):
+    self.energia += gramos / 2
+
+  def volar_hacia(self,destino):
+    self.ciudad = destino
+    self.energia /=  2 
+    
+  def recibir_rehabilitacion(self):
+    self.volar_hacia("Lihuel Calel")
+    
+  def esta_feliz(self):
+    return self.ciudad == "Lihuel Calel"
+    

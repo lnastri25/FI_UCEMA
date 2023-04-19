@@ -38,6 +38,13 @@ print("Hasta acá Pepita...")
 - Los objetos tienen estado, que está dado por el conjunto de esos atributos (volar, comer alpiste, etc). Todo eso conforma lo que se conoce como el estado de los opbjetos.
 - El estado de los objetos puede cambiar o modificarse.
 - Los objetos tienen cierto comportamiento que están dados por los mensajes que reciben de algún modo, y ese comportamiento de algun modo puede modificar su estado.
+
+- Un atributo puede tomar el valor que le damos por parámetro, o puede tomar algún valor inicial que le indiquemos.
+- Un atributo siempre va a arrancar con self. 
+- No siempre son la misma cantidad de parámetros que de atributos.
+- Estado --> Conjunto de atributos.
+- Interfaz --> Conjunto de mensajes/métodos que puede entender una clase.
+
 """
 print("Llamemos a Anastasia")
 print(anastasia)
@@ -87,14 +94,20 @@ Roberta --> Dragones
 
 - Los objetos en sí, no saben si son o no polimórficos.
 - Para ver polimorfismo necesitamos un observador u otro actor (en este caso: nosotros).
+
+- En polimorfismo hablamos de 3 participantes: 
+    • La clase/objeto que envía el mensaje y al menos 2 que la reciban. 
+    • No alcanza con que 2 clases compartan interfaz, sino que tiene que haber una tercer clase que las ponga en común a las dos.
 """
 
 """
 class "Nombre de la clase" (siempre en mayúscula):
 
-    def __init__(self, atributo1, atributo2, etc): 
+    def __init__(self, parametro1, parametro2, etc): --> self también es un parametro, pero es un parametro especial.
         # las funciones son los diferentes metodos
         # self: "uno mismo" (siempre pasarlo)
+        # self.atributo1 = atributo1
+        # self.atributo2 = atributo2
         # el init (metodo interno) es el constructor del objeto que me permite darle vida.
         # en el constructor voy a poner todas aquellas característcias que sean necesatrias 
 
