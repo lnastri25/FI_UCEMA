@@ -104,11 +104,11 @@ Roberta --> Dragones
 class "Nombre de la clase" (siempre en mayúscula):
 
     def __init__(self, parametro1, parametro2, etc): --> self también es un parametro, pero es un parametro especial.
-        # las funciones son los diferentes metodos
+        # las funciones son los diferentes metodos       (no cuenta como parametro)
         # self: "uno mismo" (siempre pasarlo)
         # self.atributo1 = atributo1
         # self.atributo2 = atributo2
-        # el init (metodo interno) es el constructor del objeto que me permite darle vida.
+        # el init (metodo interno) es el constructor del objeto que me permite darle vida. --> no es interfaz porque no le podemos mandar mensaje.
         # en el constructor voy a poner todas aquellas característcias que sean necesatrias 
 
     # instanciación del objeto

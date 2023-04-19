@@ -24,8 +24,9 @@ class Perro:
     def estaDebil(self):
         return self._caricias < 2
     
-    # La interfaz son los metodos que entiende la clase (energia, comer, acariciar, estaDebil) 
-    # El estado son los atributos (self.alimento y self.caricias)
+    # La interfaz son los metodos que entiende la clase (energia, comer, acariciar, estaDebil).
+    # El estado son los atributos (self.alimento y self.caricias).
+    # No tiene parámetros --> __init__ no cuenta (es un parámetro especial).
     
 # Ejercicio 2 #
 # Modificá el método volar de la clase Golondrina visto en la clase de teoría de manera que no pueda volar si al hacerlo la energía toma el valor 0 o valor negativo.
@@ -195,7 +196,7 @@ calculadora.valorActual()
 
 # cuales son sus interfaces
 
-# ¿Comparten interfaz?
+# ¿Comparten interfaz? (comparten toda su interfaz? parte de su interfaz? ninguna de su interfaz?)
 
 # ¿Son polimórficas?
 
@@ -243,8 +244,8 @@ def estaDebil(self):
     return self._caricias < 4
     
     # Los estados son self.alimento y self.caricias.
-    # Las interfaces son: energia(), comer(), caricias(), acariciar(), estaDebil() y pasear(). --> los métodos que entienden.
-    # Comparten parte de su interfaz. --> Poliformismo parcial.
+    # Las interfaces son: energia(), comer(), caricias(), acariciar(), estaDebil() y pasear(). --> los métodos/mensajes que entienden.
+    # Comparten parte de su interfaz. --> Polimorfismo parcial.
     # Para decir que son polimórficas necesitamos una tercer clase que use a las 2.
     
 # Ejercicio 2 #
