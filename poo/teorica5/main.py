@@ -86,7 +86,16 @@ print("Parte 3:", roberta.esta_feliz())
 # De todas formas, en la mayoría de los casos para comparar dos objetos nos alcanza con el operador de equivalencia visto antes en este recorrido, el ya conocido ==
 
 """
-    La programación POO nos permite modelizar cada uno de estos elementos en clases, definiendo sus atributos y métodos (abstracción). Al programar generamos instancias de cada uno de ellos y estableceremos cómo se comunican y relacionan.
+¿Qué es la POO?
+    - La programación POO nos permite modelizar cada uno de estos elementos en clases, definiendo sus atributos y métodos (abstracción). Al programar generamos instancias de cada uno de ellos y estableceremos cómo se comunican y relacionan.
+
+    - POO: Forma de programar en la cual se trata de desarrollar el código de forma tal que tengamos pedacitos de código que sean interconectables entre sí, que puedan dialogar entre sí y que nos permitan de ese modo armar un sistema mucho mas complejo.
+
+    - La POO se basa en pensar las herramientas como si estuviesen formadas por objetos. 
+    
+¿Qué es un objeto?
+    - Es una entidad computacional que me permite interactuar dándole mensajes. Es aquel con lo que me puedo comunicar y, él mismo, entiende ciertos mensajes. Tiene referencias internas, lo que se conoce como sus estados o tienen ciertas características internas las cuales el objeto es consciente.
+
 
 1) __init__:
 
