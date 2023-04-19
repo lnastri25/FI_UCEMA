@@ -246,7 +246,7 @@ def estaDebil(self):
     # Los estados son self.alimento y self.caricias.
     # Las interfaces son: energia(), comer(), caricias(), acariciar(), estaDebil() y pasear(). --> los métodos/mensajes que entienden.
     # Comparten parte de su interfaz. --> Polimorfismo parcial.
-    # Para decir que son polimórficas necesitamos una tercer clase que use a las 2.
+    # Para decir que son polimórficas necesitamos una tercer clase que use/les mande el mismo mensaje a las 2.
     
 # Ejercicio 2 #
 # Modificar la clase Golondrina vista en la teoría para poder preguntar si una golondrina está en equilibrio. Este equilibrio se alcanza cuando la energía se encuentra entre 150 y 300.

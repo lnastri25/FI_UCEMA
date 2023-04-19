@@ -15,8 +15,6 @@ from aves import pepita, anastasia, roberta # Importamos una librería (aves) y 
 - Sabemos que Pepita es un objeto individual, en particular es un objeto de la clase Golondrinas (yo soy un humano dentro de la clase seres humanos por ejemplo),
 Que entiende mensajes (lo que las golondrinas entienden) y que tiene las características de una Golondrina, es decir atributos.
 
-- clase: el gran grupo que engloba a esos objetos.
-
 - Si tuviese que agrupar los objetos, los agrupo en base a sus características particulares porque las comparten y ese grupo es lo que se conoce como clase. El conjunto abstracto de característcias que me definen a los objetos.
 
 - Dentro de cada clase tengo individuos, que conforman ese conjunto. Eso es lo que se conoce como instancias de una clase.
@@ -35,16 +33,10 @@ print("Hasta acá Pepita...")
 
 - Entonces ahora sabemos que el estado de pepita está dado por su energía y que pepita tiene como atributos o características saber volar y comer alpiste.
 
-- Los objetos tienen estado, que está dado por el conjunto de esos atributos (volar, comer alpiste, etc). Todo eso conforma lo que se conoce como el estado de los opbjetos.
-- El estado de los objetos puede cambiar o modificarse.
 - Los objetos tienen cierto comportamiento que están dados por los mensajes que reciben de algún modo, y ese comportamiento de algun modo puede modificar su estado.
 
 - Un atributo puede tomar el valor que le damos por parámetro, o puede tomar algún valor inicial que le indiquemos.
-- Un atributo siempre va a arrancar con self. 
 - No siempre son la misma cantidad de parámetros que de atributos.
-- Estado --> Conjunto de atributos.
-- Interfaz --> Conjunto de mensajes/métodos que puede entender una clase.
-
 """
 print("Llamemos a Anastasia")
 print(anastasia)
@@ -56,9 +48,6 @@ print(anastasia.energia)
 print("Hasta acá Anastasia...")
 
 """
-- Los objetos pueden tener distintos estados.
-- Aun con distintos estados, los objetos pueden entender los mismos mensajes (los mensajes se llaman métodos).
-
 - Cada vez que ejecutamos el script, nosotros les damos vida a estos objetos y ellos conviven entre sí dentro de lo que es el ambiente (en este caso).
 - Dentro del ambiente pueden tener un estado en particular.
 - En un ambiente distinto, se puede tener un estado diferente y en cada ambiente, los objetos conviven todos entre si, cada uno con su estado pero a veces pueden compartir algunos de los mismos mensajes.
@@ -82,45 +71,6 @@ print("Hasta acá Roberta...")
 
 Pepita y Anastasia --> Golondrinas
 Roberta --> Dragones
-
-- A cada individuo/objeto dentro de una clase: instancia
-
-- Esos mensajes que entienden los objetos se conocen como interfaz (conjunto de mensajes que entienden).
-"""
-
-"""
-- Los objetos que comparten su interfaz son polimórficos.
-- En este caso vemos un polimorfismo parcial porque comparten parte de su interfaz y no toda.
-
-- Los objetos en sí, no saben si son o no polimórficos.
-- Para ver polimorfismo necesitamos un observador u otro actor (en este caso: nosotros).
-
-- En polimorfismo hablamos de 3 participantes: 
-    • La clase/objeto que envía el mensaje y al menos 2 que la reciban. 
-    • No alcanza con que 2 clases compartan interfaz, sino que tiene que haber una tercer clase que las ponga en común a las dos.
-"""
-
-"""
-class "Nombre de la clase" (siempre en mayúscula):
-
-    def __init__(self, parametro1, parametro2, etc): --> self también es un parametro, pero es un parametro especial.
-        # las funciones son los diferentes metodos       (no cuenta como parametro)
-        # self: "uno mismo" (siempre pasarlo)
-        # self.atributo1 = atributo1
-        # self.atributo2 = atributo2
-        # el init (metodo interno) es el constructor del objeto que me permite darle vida. --> no es interfaz porque no le podemos mandar mensaje.
-        # en el constructor voy a poner todas aquellas característcias que sean necesatrias 
-
-    # instanciación del objeto
-    pepita = "Nombre de la clase"(100)
-"""
-
-"""
-1) La diferencia entre un método y una funcion es que la funcion no esta dentro de una clase. 
- El metodo (es como una función), pero forma parte de la clase.
- Un método es, entonces, la descripción de qué hacer cuando se recibe un mensaje del mismo nombre. El conjunto de estos métodos provee de comportamiento a las instancias de una clase.
-
-2) las funciones retornan un valor mientras que los procedimientos tienen un efecto, es decir, modifican algo.
 """
 
 # Tarea
@@ -135,23 +85,93 @@ print("Parte 3:", roberta.esta_feliz())
 
 # De todas formas, en la mayoría de los casos para comparar dos objetos nos alcanza con el operador de equivalencia visto antes en este recorrido, el ya conocido ==
 
-# Para conocer el estado de un objeto, podemos acceder a cada uno de sus atributos escribiendo objeto.atributo, habrás notado que, a diferencia de cuando envíamos un mensaje, al acceder a un atributo no vamos a usar paréntesis.
-
 """
-1) __init__ viene de la palabra en inglés initialize que en castellano es inicializar. Es lo que se conoce como el constructor de una clase y nos permite darle valores iniciales a los atributos de sus instancias a la hora de crearlas. 
+    La programación POO nos permite modelizar cada uno de estos elementos en clases, definiendo sus atributos y métodos (abstracción). Al programar generamos instancias de cada uno de ellos y estableceremos cómo se comunican y relacionan.
 
-__init__ también es un método, pero recordá que solo sirve para darle un valor inicial a los atributos de las instancias cuando las creamos. 
+1) __init__:
 
-2) Por su parte, self(que en castellano sería algo así como yo) es un primer parámetro obligatorio que nos permite acceder a los atributos del objeto que estamos instanciando. Si bien ese parámetro no debe llamarse selfobligatoriamente, es la convención que se utiliza para nombrarlo y la respetaremos a lo largo de todo el recorrido.
+    __init__ (método interno) viene de la palabra en inglés 'initialize' que en castellano es inicializar. Es lo que se conoce como el constructor de una clase y nos permite darle valores iniciales a los atributos de sus instancias a la hora de crearlas. No es una interfaz porque no le podemos mandar un mensaje.
 
-3) Cuando lanzamos una excepción provocamos un error explícito que interrumpe el flujo de nuestro programa.
+    __init__ también es un método, pero recordá que solo sirve para darle un valor inicial a los atributos de las instancias cuando las creamos. 
 
-La excepción no solo aborta el método en el cual se produce sino también la ejecución de todos los métodos de la cadena de envío de mensajes y los posteriores, pero cuidado, porque no se descartan los cambios realizados anteriormente en caso de que los hubiera.
+2) Self:
 
-ej: raise Exception("string) --> suele venir después de un else.
+    Por su parte, self (que en castellano sería algo así como yo) es un primer parámetro obligatorio que nos permite acceder a los atributos del objeto que estamos instanciando. Si bien ese parámetro no debe llamarse self obligatoriamente, es la convención que se utiliza para nombrarlo y la respetaremos a lo largo de todo el recorrido.
 
-Con el raise indicamos qué tipo de excepción queremos buscar; esto hace que terminemos la ejecución del programa.
+    - Un atributo siempre va a arrancar con self. 
+    - Self también es un parametro, pero es un parametro especial. No se lo cuenta como parametro si me lo preguntan.
 
-= --> asignas parametro
-== --> comparas o igualas parametro
+    def __init__(self, parametro1, parametro2, etc):
+        # las funciones son los diferentes metodos       
+        # self: "uno mismo" (siempre pasarlo)
+        # self.atributo1 = atributo1
+        # self.atributo2 = atributo2
+
+3) Estado:
+
+    - Los objetos tienen estado, que está dado por el conjunto de esos atributos (volar, comer alpiste, etc). Todo eso conforma lo que se conoce como el estado de los opbjetos.
+    - El estado de los objetos puede cambiar o modificarse.
+    - Estado --> Conjunto de atributos. (self.atributo1, self.atributo2)
+    - Los objetos pueden tener distintos estados.
+    - Aun con distintos estados, los objetos pueden entender los mismos mensajes (los mensajes se llaman métodos).
+    - Para conocer el estado de un objeto, podemos acceder a cada uno de sus atributos escribiendo objeto.atributo, habrás notado que, a diferencia de cuando envíamos un mensaje, al acceder a un atributo no vamos a usar paréntesis.
+
+4) Interfaz/Método/Mensaje:
+    - Interfaz --> Conjunto de mensajes/métodos que puede entender una clase.
+    - Esos mensajes que entienden los objetos se conocen como interfaz (conjunto de mensajes que entienden).
+    - La diferencia entre un método y una funcion es que la funcion no esta dentro de una clase. 
+    - El metodo (es como una función), pero forma parte de la clase.
+    - Un método es, entonces, la descripción de qué hacer cuando se recibe un mensaje del mismo nombre. El conjunto de estos métodos provee de comportamiento a las instancias de una clase.
+
+5) Polimorfismo:
+
+    - Polimorfismo --> Cuando dos o más objetos entienden el mismo mensaje.
+    - Los objetos que comparten su interfaz son polimórficos.
+    - En este caso vemos un polimorfismo parcial porque comparten parte de su interfaz y no toda.
+
+    - Los objetos en sí, no saben si son o no polimórficos.
+    - Para ver polimorfismo necesitamos un observador u otro actor (en este caso: nosotros).
+
+    - En polimorfismo hablamos de 3 participantes: 
+        • La clase/objeto que envía el mensaje y al menos 2 que la reciban. 
+        • No alcanza con que 2 clases compartan interfaz, sino que tiene que haber una tercer clase que las ponga en común a las dos.   
+
+6) Raise:
+
+    Cuando lanzamos una excepción provocamos un error explícito que interrumpe el flujo de nuestro programa.
+
+    La excepción no solo aborta el método en el cual se produce sino también la ejecución de todos los métodos de la cadena de envío de mensajes y los posteriores, pero cuidado, porque no se descartan los cambios realizados anteriormente en caso de que los hubiera.
+
+    ej: raise Exception("string) --> suele venir después de un else.
+
+    Con el raise indicamos qué tipo de excepción queremos buscar; esto hace que terminemos la ejecución del programa.
+
+7) Instancia:
+
+    - A cada individuo/objeto dentro de una clase se lo conoce como instancia.
+
+    class "Nombre de la clase" (siempre en mayúscula la primer letra):
+
+    # instanciación del objeto
+    pepita = "Nombre de la clase"(100)
+
+8) Clase:
+
+    - Es el gran grupo que engloba a estos objetos.
+    - Descripción de objeto. Consta de una serie de métodos y datos que resumen las características de este objeto. Definir clases permite trabajar con código reutilizable. Puesto que desde una clase se puede crear una instancia y así reutilizar el código escrito para esta si tener que volver a escribir el código para la instancia. La instancia toma el patrón de la clase padre. Sin embargo, las variables son idependientes.
+
+9) Atributos:
+
+    - Características que aplican al objeto solo en el caso en que el sea visible en pantalla por el usuario; entonces sus atributos son el aspecto que refleja, tanto en color, tamaño, posición, si está o no habilitado.
+
+x) Agregados:
+
+    a) La diferencia entre un método y una funcion es que la funcion no esta dentro de una clase. 
+    El metodo (es como una función), pero forma parte de la clase.
+    Un método es, entonces, la descripción de qué hacer cuando se recibe un mensaje del mismo nombre. El conjunto de estos métodos provee de comportamiento a las instancias de una clase.
+
+    b) Las funciones retornan un valor mientras que los procedimientos tienen un efecto, es decir, modifican algo.
+
+    c)  = --> asignas parametro
+        == --> comparas o igualas parametro
 """
