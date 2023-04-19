@@ -71,3 +71,12 @@ print(re.sub(patron, "###", texto)) # Reemplaza ipsum por ###
 # Retorna todas las coincidencias no superpuestas de pattern en string, como una lista de strings o tuplas. El string se escanea de izquierda a derecha y las coincidencias se retornan en el orden en que se encuentran. Las coincidencias vacías se incluyen en el resultado.
 
 # El resultado depende del número de grupos detectados en el patrón. Si no hay grupos, retorna una lista de strings que coincidan con el patrón completo. Si existe exactamente un grupo, retorna una lista de strings que coincidan con ese grupo. Si hay varios grupos presentes, retorna una lista de tuplas de strings que coinciden con los grupos. Los grupos que no son detectados no afectan la forma del resultado.
+
+
+
+# Para hacer un patrón que queremos que lea más de una letra --> hay que usar *^, etc porque sino los matches van a ser de solamente un caracter. 
+
+# [a-z] --> lorenzo.nastri --> me trae l
+# [a-z]* --> lorenzo.nastri --> me trae lorenzo.nastri
+# [a-z]+ --> lorenzo.nastri --> me trae lorenzo.nastri
+# [a-z]+[.] --> lorenzo.nastri --> me trae lorenzo.

@@ -207,6 +207,11 @@ def validar_email(email):
 
 print(validar_email('lorenzonastri@gmail.com'))
 
+def mail_correcto(string):
+    return bool(re.search("^\w+[.-]?\w*@[a-z]+[.][a-z]+[.]?[a-z]?$", string))
+print(mail_correcto("lorenzo-nastri@gmail.com"))
+print(mail_correcto("lorenzo-&nastri@gmail.com"))
+
 
 # r: significa que cualquier carácter especial contenido en la cadena se interpreta literalmente. (raw string)
 
