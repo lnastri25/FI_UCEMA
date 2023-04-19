@@ -150,4 +150,8 @@ La excepción no solo aborta el método en el cual se produce sino también la e
 
 ej: raise Exception("string) --> suele venir después de un else.
 
+Con el raise indicamos qué tipo de excepción queremos buscar; esto hace que terminemos la ejecución del programa.
+
+= --> asignas parametro
+== --> comparas o igualas parametro
 """
