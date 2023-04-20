@@ -298,44 +298,32 @@ class Golondrina:
 
 # Definí las clases Moto, Auto y MedioDeTransporte y hace que las dos primeras hereden de la tercera.
 
-class Moto:
-    def __init__(self, combustible):
-        self.combustible = combustible
-
-    def cargar_combustible(self, litros):
-        self.combustible += litros
-
-    def recorrer(self, kms):
-        self.combustible -= kms
-
-    def entran(self, personas):
-        return personas <= 2
-    
-class Auto:
-    def __init__(self, combustible):
-        self.combustible = combustible
-
-    def cargar_combustible(self, litros):
-        self.combustible += litros
-
-    def recorrer(self, kms):
-        self.combustible -= kms / 2
-
-    def entran(self, personas):
-        return personas <= 5
-    
 class MedioDeTransporte:
-    def __init__(self, combustible):
-        self.combustible = combustible
 
-    def cargar_combustible(self, litros):
-        self.combustible += litros
-
-    def recorrer(self, kms):
+  def __init__(self, combustible):
+    self.combustible = combustible
+      
+  def cargar_combustible(self, litros):
+    self.combustible += litros
+    
+  def entran_personas(self, personas):
+    return personas <= self.maximo_personas()
+      
+class Moto(MedioDeTransporte):
+  
+  def maximo_personas(self):
+    return 2 
+    
+  def recorrer(self, kms):
         self.combustible -= kms
-
-    def entran(self, personas):
-        return personas <= 5
+      
+class Auto(MedioDeTransporte):
+    
+  def maximo_personas(self):
+    return 5
+  
+  def recorrer(self, kms):
+     self.combustible -= kms / 2
     
 "https://mumuki.io/fundamentos-informatica-ucema/chapters/682-programacion-con-objetos" # --> Mumuki
 

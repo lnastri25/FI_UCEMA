@@ -169,9 +169,40 @@ print("Parte 3:", roberta.esta_feliz())
     - Es el gran grupo que engloba a estos objetos.
     - Descripción de objeto. Consta de una serie de métodos y datos que resumen las características de este objeto. Definir clases permite trabajar con código reutilizable. Puesto que desde una clase se puede crear una instancia y así reutilizar el código escrito para esta si tener que volver a escribir el código para la instancia. La instancia toma el patrón de la clase padre. Sin embargo, las variables son idependientes.
 
+    2 tipos de clases:
+
+    A) Clase abstracta:
+
+        - Una clase abstracta es aquella de la que no se pueden declarar instancias, dicho de otra manera no se pueden declarar objetos de una clase abstracta.
+        - La finalidad de una clase abstracta es servir como clase base para otras clases a las que generalmente se conoce como clases "concretas".
+        - Ejemplo: Dispositivo
+        - Las clases abstractas proveen comportamiento a sus subclases.
+
+    B) Clase concreta:
+
+        - Una clase concreta es aquella de la que se pueden declarar instancias, dicho de otra manera se pueden declarar objetos de una clase concreta. 
+        - Ejemplo: Notebook y Tablet
+        - Las clases concretas se utilizan para crear instancias.
+
 9) Atributos:
 
     - Características que aplican al objeto solo en el caso en que el sea visible en pantalla por el usuario; entonces sus atributos son el aspecto que refleja, tanto en color, tamaño, posición, si está o no habilitado.
+
+10) Herencia:
+
+    - Mecanismo para compartir automáticamente métodos y datos entre classes, subclases y objetos.
+    - Permite crear nuevas clases introduciendo las variaciones con respecto a su clase padre.
+
+    2 tipos de herencia:
+
+    A) Herencia simple: una subclase puede herecar datos y métodos de una clase simple así como añadir o sustraer ciertos comportamientos.
+
+    B) Herencia múltiple: posibilidad de adquirir métodos y datos de varias clases simultáneamente.
+
+    - Para recapitular, cuando dos o más objetos repiten lógica, creamos una clase con el comportamiento en común. 
+    - Análogamente, en el caso que dos o más clases repitan lógica, debemos crear una nueva clase a la que llamaremos superclase. 
+    - Esta llevará los métodos repetidos de las clases originales (subclases) y haremos que estas últimas hereden de ella. 
+    - De esta forma, las subclases que heredan de la superclase sólo tendrán definido su comportamiento particular. 
 
 x) Agregados:
 
