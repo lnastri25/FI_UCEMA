@@ -175,6 +175,7 @@ print("Parte 3:", roberta.esta_feliz())
 
         - Una clase abstracta es aquella de la que no se pueden declarar instancias, dicho de otra manera no se pueden declarar objetos de una clase abstracta.
         - La finalidad de una clase abstracta es servir como clase base para otras clases a las que generalmente se conoce como clases "concretas".
+        - No se instancian.
         - Ejemplo: Dispositivo
         - Las clases abstractas proveen comportamiento a sus subclases.
 
@@ -183,6 +184,8 @@ print("Parte 3:", roberta.esta_feliz())
         - Una clase concreta es aquella de la que se pueden declarar instancias, dicho de otra manera se pueden declarar objetos de una clase concreta. 
         - Ejemplo: Notebook y Tablet
         - Las clases concretas se utilizan para crear instancias.
+
+    - Una subclase puede heredar de una clase abstracta tanto como de una concreta.
 
 9) Atributos:
 
@@ -203,6 +206,14 @@ print("Parte 3:", roberta.esta_feliz())
     - Análogamente, en el caso que dos o más clases repitan lógica, debemos crear una nueva clase a la que llamaremos superclase. 
     - Esta llevará los métodos repetidos de las clases originales (subclases) y haremos que estas últimas hereden de ella. 
     - De esta forma, las subclases que heredan de la superclase sólo tendrán definido su comportamiento particular. 
+
+11) Super:
+
+    - La función super() nos permite hacer referencia a la clase padre de la clase actual.
+    - Al utilizar super en el método de una subclase, se evalúa el método con el mismo nombre de su superclase y además lo que se está redefiniendo
+
+    - Como podemos notar, super en cierta forma modifica como se comporta el method lookup.
+    - Recordá utilizar super para evitar repetir lógica.
 
 x) Agregados:
 
