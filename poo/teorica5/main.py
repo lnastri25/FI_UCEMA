@@ -99,7 +99,10 @@ print("Parte 3:", roberta.esta_feliz())
 
 1) __init__:
 
-    __init__ (método interno) viene de la palabra en inglés 'initialize' que en castellano es inicializar. Es lo que se conoce como el constructor de una clase y nos permite darle valores iniciales a los atributos de sus instancias a la hora de crearlas. No es una interfaz porque no le podemos mandar un mensaje.
+    __init__ (método interno) viene de la palabra en inglés 'initialize' que en castellano es inicializar. 
+    - Es lo que se conoce como el constructor de una clase y nos permite darle valores iniciales a los atributos de sus instancias a la hora de crearlas. No es una interfaz porque no le podemos mandar un mensaje.
+
+    - Se lo conoce como constructor y define cual es el estado inicial del objeto.
 
     __init__ también es un método, pero recordá que solo sirve para darle un valor inicial a los atributos de las instancias cuando las creamos. 
 
@@ -107,6 +110,7 @@ print("Parte 3:", roberta.esta_feliz())
 
     Por su parte, self (que en castellano sería algo así como yo) es un primer parámetro obligatorio que nos permite acceder a los atributos del objeto que estamos instanciando. Si bien ese parámetro no debe llamarse self obligatoriamente, es la convención que se utiliza para nombrarlo y la respetaremos a lo largo de todo el recorrido.
 
+    - Es la referencia al propio objeto o instancia en particular. 
     - Un atributo siempre va a arrancar con self. 
     - Self también es un parametro, pero es un parametro especial. No se lo cuenta como parametro si me lo preguntan.
 
@@ -143,7 +147,8 @@ print("Parte 3:", roberta.esta_feliz())
 
     - En polimorfismo hablamos de 3 participantes: 
         • La clase/objeto que envía el mensaje y al menos 2 que la reciban. 
-        • No alcanza con que 2 clases compartan interfaz, sino que tiene que haber una tercer clase que las ponga en común a las dos.   
+        • No alcanza con que 2 clases compartan interfaz, sino que tiene que haber una tercer clase que las ponga en común a las dos.
+        • Este tercer participante, va a darle órdenes a estos 2 objetos para poder comunicarse y se va a dar cuenta que se necesita el mismo mensaje para uno y otro.
 
 6) Raise:
 
@@ -167,6 +172,7 @@ print("Parte 3:", roberta.esta_feliz())
 8) Clase:
 
     - Es el gran grupo que engloba a estos objetos.
+    - La representación de un objeto, pero no es un objeto en sí.
     - Descripción de objeto. Consta de una serie de métodos y datos que resumen las características de este objeto. Definir clases permite trabajar con código reutilizable. Puesto que desde una clase se puede crear una instancia y así reutilizar el código escrito para esta si tener que volver a escribir el código para la instancia. La instancia toma el patrón de la clase padre. Sin embargo, las variables son idependientes.
 
     2 tipos de clases:
@@ -193,7 +199,10 @@ print("Parte 3:", roberta.esta_feliz())
 
 10) Herencia:
 
-    - Mecanismo para compartir automáticamente métodos y datos entre classes, subclases y objetos.
+    - Clase madre/Super clase
+    - Clase hija/Sub clase
+    
+    - Mecanismo para compartir automáticamente métodos y datos entre clases, subclases y objetos.
     - Permite crear nuevas clases introduciendo las variaciones con respecto a su clase padre.
 
     2 tipos de herencia:
@@ -221,8 +230,12 @@ x) Agregados:
     El metodo (es como una función), pero forma parte de la clase.
     Un método es, entonces, la descripción de qué hacer cuando se recibe un mensaje del mismo nombre. El conjunto de estos métodos provee de comportamiento a las instancias de una clase.
 
-    b) Las funciones retornan un valor mientras que los procedimientos tienen un efecto, es decir, modifican algo.
+    b) La diferencia entre un método y un procedimiento es que las funciones retornan un valor mientras que los procedimientos no retornan nada. Los procedimientos tienen un efecto, es decir, modifican algo.
 
     c)  = --> asignas parametro
         == --> comparas o igualas parametro
+
+    d) La diferencia entre un método y un procedimiento es la misma que la diferencia entre un método y una función. La diferencia es que el método está siempre adentro de una clase.
+        El método puede retornar o no retornar cosas.
+        Los procedimientos nunca retornan.
 """
