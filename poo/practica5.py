@@ -282,6 +282,26 @@ class Golondrina:
 # decirle al ornitólogo que estudie una de las golondrinas y los dos gorriones,
 # decirle al ornitólogo que realice su rutina sobre aves,
 # verificar los valores de las cuatro aves definidas, para las tres que tiene en estudio el ornitólogo estos valores deberían haber cambiado, para la otra ave no.
+
+
+class Ornitologo:
+  def __init__(self):
+    self.aves = []
+
+  def estudiarAve(self, ave):
+    self.aves.append(ave)
+
+  def avesEnEstudio(self):
+    return self.aves
+
+  def realizarRutinaSobreAves(self):
+    for ave in self.aves:
+      ave.comer_alpiste(80)
+      ave.volar(70)
+      ave.comer_alpiste(10)
+
+  def avesEnEquilibrio(self):
+    return [ave for ave in self.aves if ave.esta_en_equilibrio()]
     
 # Ejercicio 4 #
 # Vamos a salir de paseo (¡si la pandemia nos deja!). Para esto podemos utilizar como vehículos motos o autos, y de estos dos medios de transporte sabemos que:
