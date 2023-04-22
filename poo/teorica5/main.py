@@ -224,6 +224,17 @@ print("Parte 3:", roberta.esta_feliz())
     - Como podemos notar, super en cierta forma modifica como se comporta el method lookup.
     - Recordá utilizar super para evitar repetir lógica.
 
+
+12) Sets:
+
+    - Los sets son muy parecidos a las listas, pero tienen dos particularidades que los diferencian: 
+        a) no tienen elementos repetidos;
+        b) sus elementos no están ordenados.
+
+        self.libros = set()
+
+    - No usan self.libro.append() --> sin embargo usamos add --> self.libro.add()
+
 x) Agregados:
 
     a) La diferencia entre un método y una funcion es que la funcion no esta dentro de una clase. 
