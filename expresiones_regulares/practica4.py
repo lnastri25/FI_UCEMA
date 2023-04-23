@@ -173,7 +173,7 @@ print(texto_reemplazado)
 # Escribí un programa que reemplace los dos primeros caracteres no alfanúmericos por guiones bajos.
 
 def reemplazar_dos(string):
-    reemplazado = re.sub('[\W]','_',string)
+    reemplazado = re.sub(r'[\W]','_',string, 2)
     print(reemplazado)
 reemplazar_dos('$$Lorenzo')
 
