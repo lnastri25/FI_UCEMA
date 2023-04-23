@@ -155,3 +155,7 @@ $ --> fin de línea.
 
     - A causa de que las expresiones regulares a menudo utilizan caracteres de escape (como por ejemplo la barra invertida ), es necesario indicar que las mismas no se interpreten como tales sino como parte de la expresión regular propiamente dicha. La forma más simple de hacerlo es comenzar la cadena con una letra r para indicar que la misma debe tomarse literalmente. En Python, esto se denomina un raw string.
 """
+
+# .gitignore: 
+# - Archivo con contenido que no queres subir a github
+# - Escribis en el script de este archivo el nombre de los archivos que quieres ignorar o el path de la carpeta que quiero que ignore
