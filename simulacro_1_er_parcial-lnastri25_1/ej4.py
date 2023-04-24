@@ -53,5 +53,4 @@ class FantasmaAterrador(Fantasma):
     def comer_pacman(self, pacman):
         pacman.vidas -= 2
 
-# B) A medida que avanza el juego Pac-Man obtiene nuevas habilidades: sí llega a 200 puntos, gana una vida extra. Además, ahora gana más velocidad a medida que suma puntos de la forma: cada punto extra le da un 1% más de velocidad.
 

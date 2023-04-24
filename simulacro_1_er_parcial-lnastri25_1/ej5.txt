@@ -1,13 +1,8 @@
 1)
 
-A) Onomatopopih debe hacer push en la terminal.
-B) Onomatopopih debe hacer pull en la terminal.
-C) Onomatopopih debe hacer git push en la terminal.
 D) Onomatopopih debe hacer git pull en la terminal. [X] --> Con el 'git pull' lo que hago es bajarme los cambios del proyecto a mi computadora local. SIEMPRE antes de arrancar a trabajar tengo que hacer git pull. Esta opción se diferencia de las otras (sin git al principio) ya que tiene que aparecer la palabra git para que se efectúe lo que quiero.
 
-E) Onomatopopih después de agregar su aporte debe escribir en una terminal git add y luego git commit.
-
-F) Onomatopopih después de agregar su aporte debe escribir en una terminal git add . y luego git commit -m "mis aportes" y finalmente git push. [X] --> Después de trabajar le indico a la computadora que se prepare para la foto haciendo 'git add .'. Después, usando 'git commit -m "mensaje"', le indico a la computadora que guarde los cambios definitivamente en una foto y con el mensaje le indico que hay que ponerle una identificación y además los cambios que le hice a la foto. Por último, utilizando 'git push' sube el proyecto (los cambios) a la web.
+F) Onomatopopih después de agregar su aporte debe escribir en una terminal git add . y luego git commit -m "mis aportes" y finalmente git push. [X] --> Después de trabajar le indico a la computadora que se prepare para la foto haciendo 'git add .' (el . indica todos). Después, usando 'git commit -m "mensaje"', le indico a la computadora que guarde los cambios definitivamente en una foto y con el mensaje le indico que hay que ponerle una identificación y además los cambios que le hice a la foto. Por último, utilizando 'git push' sube el proyecto (los cambios/aportes al repositorio) a la web.
 
 2)
 

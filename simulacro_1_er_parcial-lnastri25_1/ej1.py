@@ -4,16 +4,11 @@ import re
 
 # Obtener la lista de subsecuencias delimitadas por 'X' e 'Y', que incluyan la subsecuencia 'ab'. Por ejemplo para XbaaaYjXababYqbabbbaaYqXffeeY, hay que devolver ['abab', 'babbbaa'].
 
+def subsecuencias(string):
+    patron = "X(b*ab.*?)Y"
+    return re.findall(patron,string)
 
-def obtener_subsecuencias(string):
-    coincidencias = re.findall('X(.*?)Y', string) 
-    resultado = []
-    for coincidencia in coincidencias:
-        if 'ab' in coincidencia:
-            resultado.append(re.findall('(ab.*?)($|X|Y)', coincidencia)[0][0])
-    return resultado
-
-print(obtener_subsecuencias("XbaaaYjXababYqbabbbaaYqXffeeY"))
+print(subsecuencias("XbaaaYjXababYqbabbbaaYqXffeeY"))
 
 
 # Onomatopopih esta aprendiendo expresiones regulares y le pidieron construir una función que sea capaz de extraer la lista de substrings delimitadas por patrones 'ag' y 'cta' y no incluyan números. Revisa su código propuesto y marca con una x las opciones correctas. JUSTIFICA tus respuestas
