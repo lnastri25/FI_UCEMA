@@ -21,33 +21,4 @@ with open("base_de_datos.txt", "w") as mi_arch1:
         for gmail in gmails:
             mi_arch1.write(gmail + "\n")
 
-
-# B) Ejecutá el script_misterioso.py y respondé:
-
-# ¡. ¿Qué tipo de exepción arroja la corrida del script?
-
-"""
-Arroja un Value Error. Esto ocurre cuando una función es invocada con el tipo de argumento correcto, pero con el valor inadecuado.
-"""
-
-# ii. Mejorá el código para que capture dicho error específicamente y lo maneje imprimiendo una advertencia al usuario sobre las posibles causas de dicho error. ¿Qué otras excepciones deberías considerar?
-
-def trasladar(una_lista, otra_lista, elemento):
-  otra_lista.append(elemento)
-  una_lista.remove(elemento)
-
-lista = [2,5,8]
-listita = []
-trasladar(listita, lista, 2)
-
-
-def trasladar(una_lista, otra_lista, elemento):
-    try:
-      una_lista.remove(elemento)
-      otra_lista.append(elemento)
-    except ValueError:
-        print ("El elemento que se quiere eliminar no está en la lista")
-
-lista = [2,5,8]
-listita = []
-trasladar(listita, lista, 2)
+# El punto B no se resuelve.
