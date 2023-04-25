@@ -18,11 +18,11 @@ def funcionDeExpresiones_Regulares(string):
 
 print(funcionDeExpresiones_Regulares('aabocaggaaactazu4lggaasag24gra1ndecta'))
 
-# A) El nombre de la función de Onomatopopih respeta las convenciones de nombres de Python. --> FALSO. No hay error de código, solamente que en Python se suele usar snake case.
+# A) El nombre de la función de Onomatopopih respeta las convenciones de nombres de Python. --> FALSO. No hay error de código, solamente que en Python se suele usar snake_case y acá se puede observar que hay una mezcla entre camelCase y snake_case.
 
-# B) La función lanza NameError al ser ejecutada. --> FALSO. Ocurre cuando tratas de usar una variable o una funcion que no fue definida previamente.
+# B) La función lanza NameError al ser ejecutada. --> FALSO. Un NameError ocurre cuando tratas de usar una variable o una funcion que no fue definida previamente.
 
-# C) La función lanza SyntaxError al ser ejecutada. --> FALSO. Ocurre cuando el intérprete se encuentra con un error de sintaxis en el codigo.
+# C) La función lanza SyntaxError al ser ejecutada. --> FALSO. Un SyntaxError curre cuando el intérprete se encuentra con un error de sintaxis en el codigo.
 
 # D) Una vez corregida la función, cuando se la invoca usando el texto 'aabocaaggaaactazu4lgaaasad24gra1ndecta' devuelve ['gaaa'] --> VERDADERO. Cumple con lo que se pide en la consigna. La modificación '\D' hace referencia a la no incluision de caracteres numericos.
 
