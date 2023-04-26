@@ -229,6 +229,8 @@ print("Parte 3:", roberta.esta_feliz())
     - Los sets son muy parecidos a las listas, pero tienen dos particularidades que los diferencian: 
         a) no tienen elementos repetidos;
         b) sus elementos no están ordenados.
+    
+    - Es mejor usar sets en lugar de listas tanto como sea posible, por su rapidez para recuperar datos y economía de espacio de memoria.
 
         self.libros = set()
 
