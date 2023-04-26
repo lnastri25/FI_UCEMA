@@ -10,6 +10,7 @@ def subsecuencias(string):
 
 print(subsecuencias("XbaaaYjXababYqbabbbaaYqXffeeY"))
 
+# "X([^XY]*ab[^XY]*)Y" --> Otra manera de hacerlo.
 
 # Onomatopopih esta aprendiendo expresiones regulares y le pidieron construir una función que sea capaz de extraer la lista de substrings delimitadas por patrones 'ag' y 'cta' y no incluyan números. Revisa su código propuesto y marca con una x las opciones correctas. JUSTIFICA tus respuestas
 
