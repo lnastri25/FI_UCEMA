@@ -6,10 +6,7 @@ F) Onomatopopih después de agregar su aporte debe escribir en una terminal git 
 
 2)
 
-A) Onomatopopih debe hacer git push en la terminal.
-B) Onomatopopih debe hacer git pull en la terminal. [X] --> Con el 'git pull' lo que hago es bajarme los cambios del proyecto a mi computadora local. SIEMPRE antes de arrancar a trabajar tengo que hacer git pull. Esta opción se diferencia de las otras (sin git al principio) ya que tiene que aparecer la palabra git para que se efectúe lo que quiero.
-
-C) Onomatopopih debe hacer git clone 'clave SSH' en la terminal.
+B) Onomatopopih debe hacer git pull en la terminal. [X] --> Con el 'git pull' lo que hago es bajarme los cambios del proyecto a mi computadora local. SIEMPRE antes de arrancar a trabajar tengo que hacer git pull. De esta manera forma actualiza su repositorio.
 
 
 [X] --> OPCIONES CORRECTAS

@@ -91,6 +91,7 @@ class Fantasma:
     
 pacman = PacMan()
 
+
 # TERCERA OPCIÓN DE RESOLUCIÓN
 
 class PacMan:
@@ -168,3 +169,4 @@ class PacManMejorado(PacMan):
     
     def velocidad(self):
         return 3 + self.puntos / 100
+    
