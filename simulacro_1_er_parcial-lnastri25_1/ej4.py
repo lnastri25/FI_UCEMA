@@ -6,69 +6,165 @@
 
 # Modelar las clases y mensajes necesarios para resolver esta situación.
 
+"""
+Modificación de enunciado:
+
+- come_bolitas --> doble cantidad
+- come_fantasma --> rosa = 8; verde = 6, naranja = 4; rojo = 2
+- velocidad --> (2xpuntos)/100
+- perder_vida --> contador - 1 (reseteo puntos)
+              --> -3 vidas --> "Game Over"
+"""
+
+
+# PRIMERA OPCIÓN DE RESOLUCIÓN
+
 class PacMan:
     def __init__(self):
         self.vidas = 3
         self.puntos = 0
-        self.velocidad = 1
+        # velocidad opcional
 
-    def comer_bolitas(self,bolitas):
-        self.puntos += bolitas
-        self.velocidad +=bolitas
+    def comerBolita(self, cantidad):
+        self.puntos += (cantidad * 2)
+
+    def velocidad(self):
+        return self.puntos 
     
-    def comer_fantasmas(self,fantasma):
-        self.puntos += fantasma.morir() 
-        self.velocidad += fantasma.morir() 
+    def perderVida(self):
+        self.puntos = 0
+        self.vidas -= 1
+        if self.vidas == 0:
+            print ("GAME OVER")
 
-    def me_toco_un_fantasma(self,fantasma):
-        if self.esta_vivo():
-            self.vidas -= fantasma.quitar_vida()
-        else:
-            raise Exception ("Tu Pacman ha Muerto!")
+    def comerFantasma(self, fantasma):
+        if fantasma == "rosa":
+            self.puntos += 8
+        elif fantasma == "verde":
+            self.puntos += 6
+        elif fantasma == "naranja":
+            self.puntos += 4
+        elif fantasma == "rojo":
+            self.puntos += 2
+        else: 
+            print ("No es un fantasma")
 
-    def esta_vivo(self):
-        return self.vidas < 0
+pacman = PacMan()
+print(pacman.puntos)
+pacman.comerBolita(10)
+print(pacman.puntos)
+pacman.comerFantasma("rojo")
+print(pacman.puntos)
+pacman.comerFantasma("verde")
+print(pacman.puntos)
 
-    def nuevas_habilidades(self):
-        if self.puntos > 200: 
-            self.vidas += 1
-        else: pass
+
+# SEGUNDA OPCIÓN DE RESOLUCIÓN
+
+class PacMan:
+
+    def __init__(self):
+        self.vidas = 3
+        self.puntos = 0
         
+    def comerBolita(self, cantidad):
+        self.puntos += (cantidad * 2)
 
-class Fantasmas:
-    def __init__(self,puntos):
-        self.puntos = puntos
+    def velocidad(self):
+        return self.puntos 
+    
+    def perderVida(self):
+        self.puntos = 0
+        self.vidas -= 1
+        if self.vidas == 0:
+            print ("GAME OVER")
+    
+    def comerFantasma(self, fantasma, color):
+        self.puntos += fantasma.puntos_color(color)
 
-    def morir(self):
-        return self.puntos
+class Fantasma:
+    def __init__(self):
+        self.fantasmas = {"rosa": 8, "verde": 6, "naranja": 4, "rojo": 2}
+    
+    def puntos_color(self, color):
+        return self.fantasmas[color]
+    
+pacman = PacMan()
 
-    def quitar_vida(self):
-        return 1
+# TERCERA OPCIÓN DE RESOLUCIÓN
 
-class FantasmasAterradores(Fantasmas):
-    def quitar_vida(self):
+class PacMan:
+    def __init__(self):
+        self.vidas = 3
+        self.puntos = 0
+        # velocidad opcional
+
+    def comerBolita(self, cantidad):
+        self.puntos += (cantidad * 2)
+
+    def velocidad(self):
+        return self.puntos 
+    
+    def perderVida(self):
+        self.puntos = 0
+        self.vidas -= 1
+        if self.vidas == 0:
+            print ("GAME OVER")
+
+    def comerFantasma(self, fantasma, color):
+        fantasma.set_color(color)
+        self.puntos += fantasma.puntos_color(color)
+
+class Fantasma:
+    def __init__(self):
+        self.color = None
+
+    def set_color(self, color):
+        self.color = color
+    
+    def puntos_color(self, color):
+        return self.color.puntos()
+
+class Rojo:
+    def puntos(self):
         return 2
 
+class Naranja:
+    def puntos(self):
+        return 4
 
-pacquito = PacMan()
+class Verde:
+    def puntos(self):
+        return 6
 
-fantasma_rosa = Fantasmas(8)
-fantasma_verde = Fantasmas(6)
-fantasma_naranja = Fantasmas(4)
-fantasma_rojo = Fantasmas(2)
-fantasma_multicolor = FantasmasAterradores(10)
+class Rosa:
+    def puntos(self):
+        return 8
 
+pacman = PacMan()
+rojo = Rojo()
+rosa = Rosa()
+naranja = Naranja()
+verde = Verde()
+fantasma = Fantasma()
 
-
-print(pacquito.esta_vivo)
-print(pacquito.vidas)
-pacquito.me_toco_un_fantasma(fantasma_multicolor)
-pacquito.me_toco_un_fantasma(fantasma_rosa)
-print(pacquito.vivo)
-print(pacquito.vidas)
-pacquito.me_toco_un_fantasma(fantasma_rosa)
-print(pacquito.vidas)
-
-print(pacquito.esta_vivo)
+print(pacman.puntos)
+pacman.comerBolita(10)
+print(pacman.puntos)
+pacman.comerFantasma(fantasma, rojo)
+print(pacman.puntos)
+pacman.comerFantasma(fantasma, verde)
+print(pacman.puntos)
 
 # B) A medida que avanza el juego Pac-Man obtiene nuevas habilidades: sí llega a 200 puntos, gana una vida extra. Además, ahora gana más velocidad a medida que suma puntos de la forma: cada punto extra le da un 1% más de velocidad.
+
+class PacManMejorado(PacMan):
+    def vidaExtra(self):
+        if self.puntos >= 200:
+            self.vidas += 1
+            self.puntos -= 200
+        else:
+            print("Faltan", 200 - self.puntos, "puntos para ganar una vida extra")
+    
+    def velocidad(self):
+        return 3 + self.puntos / 100
