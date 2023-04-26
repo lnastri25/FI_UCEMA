@@ -6,51 +6,69 @@
 
 # Modelar las clases y mensajes necesarios para resolver esta situación.
 
-# B) A medida que avanza el juego Pac-Man obtiene nuevas habilidades: sí llega a 200 puntos, gana una vida extra. Además, ahora gana más velocidad a medida que suma puntos de la forma: cada punto extra le da un 1% más de velocidad.
-
 class PacMan:
-    def __init__(self, vidas=3, velocidad=1):
-        self.vidas = vidas
-        self.velocidad = velocidad
-
-    def comer_bolita(self, bolita):
-        self.velocidad += bolita.puntaje * 0.01
-
-    def comer_fantasma(self, fantasma):
-        self.vidas -= fantasma.puntaje // 2
-
-class Bolita:
-    def __init__(self, puntaje):
-        self.puntaje = puntaje
-    
-class Fantasma:
-    def __init__(self, puntaje):
-        self.puntaje = puntaje
-    
-class FantasmaRojo(Fantasma):
     def __init__(self):
-        super().__init__(puntaje=2)
-    
-class FantasmaNaranja(Fantasma):
-    def __init__(self):
-        super().__init__(puntaje=4)
-    
-class FantasmaVerde(Fantasma):
-    def __init__(self):
-        super().__init__(puntaje=6)
-    
-class FantasmaRosa(Fantasma):
-    def __init__(self):
-        super().__init__(puntaje=8)
+        self.vidas = 3
+        self.puntos = 0
+        self.velocidad = 1
 
-class FantasmaAterrador(Fantasma):
-    def __init__(self):
-        super().__init__(puntaje=0)
+    def comer_bolitas(self,bolitas):
+        self.puntos += bolitas
+        self.velocidad +=bolitas
     
-    def comer_fantasma(self, fantasma):
-        fantasma.puntaje = 0
-    
-    def comer_pacman(self, pacman):
-        pacman.vidas -= 2
+    def comer_fantasmas(self,fantasma):
+        self.puntos += fantasma.morir() 
+        self.velocidad += fantasma.morir() 
+
+    def me_toco_un_fantasma(self,fantasma):
+        if self.esta_vivo():
+            self.vidas -= fantasma.quitar_vida()
+        else:
+            raise Exception ("Tu Pacman ha Muerto!")
+
+    def esta_vivo(self):
+        return self.vidas < 0
+
+    def nuevas_habilidades(self):
+        if self.puntos > 200: 
+            self.vidas += 1
+        else: pass
+        
+
+class Fantasmas:
+    def __init__(self,puntos):
+        self.puntos = puntos
+
+    def morir(self):
+        return self.puntos
+
+    def quitar_vida(self):
+        return 1
+
+class FantasmasAterradores(Fantasmas):
+    def quitar_vida(self):
+        return 2
 
 
+pacquito = PacMan()
+
+fantasma_rosa = Fantasmas(8)
+fantasma_verde = Fantasmas(6)
+fantasma_naranja = Fantasmas(4)
+fantasma_rojo = Fantasmas(2)
+fantasma_multicolor = FantasmasAterradores(10)
+
+
+
+print(pacquito.esta_vivo)
+print(pacquito.vidas)
+pacquito.me_toco_un_fantasma(fantasma_multicolor)
+pacquito.me_toco_un_fantasma(fantasma_rosa)
+print(pacquito.vivo)
+print(pacquito.vidas)
+pacquito.me_toco_un_fantasma(fantasma_rosa)
+print(pacquito.vidas)
+
+print(pacquito.esta_vivo)
+
+# B) A medida que avanza el juego Pac-Man obtiene nuevas habilidades: sí llega a 200 puntos, gana una vida extra. Además, ahora gana más velocidad a medida que suma puntos de la forma: cada punto extra le da un 1% más de velocidad.
