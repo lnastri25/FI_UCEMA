@@ -158,7 +158,7 @@ $ --> fin de línea.
 
 3) raw string
 
-    - A causa de que las expresiones regulares a menudo utilizan caracteres de escape (como por ejemplo la barra invertida ), es necesario indicar que las mismas no se interpreten como tales sino como parte de la expresión regular propiamente dicha. La forma más simple de hacerlo es comenzar la cadena con una letra r para indicar que la misma debe tomarse literalmente. En Python, esto se denomina un raw string.
+    - A causa de que las expresiones regulares a menudo utilizan caracteres de escape (como por ejemplo la barra invertida), es necesario indicar que las mismas no se interpreten como tales sino como parte de la expresión regular propiamente dicha. La forma más simple de hacerlo es comenzar la cadena con una letra 'r' para indicar que la misma debe tomarse literalmente. En Python, esto se denomina un raw string.
 """
 
 # .gitignore: 
