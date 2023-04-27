@@ -169,4 +169,3 @@ class PacManMejorado(PacMan):
     
     def velocidad(self):
         return 3 + self.puntos / 100
-    

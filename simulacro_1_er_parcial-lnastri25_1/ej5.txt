@@ -6,7 +6,7 @@ F) Onomatopopih después de agregar su aporte debe escribir en una terminal git 
 
 2)
 
-B) Onomatopopih debe hacer git pull en la terminal. [X] --> Con el 'git pull' lo que hago es bajarme los cambios del proyecto a mi computadora local. SIEMPRE antes de arrancar a trabajar tengo que hacer git pull. De esta manera forma actualiza su repositorio.
+B) Onomatopopih debe hacer git pull en la terminal. [X] --> Con el 'git pull' lo que hago es bajarme los cambios del proyecto a mi computadora local. SIEMPRE antes de arrancar a trabajar tengo que hacer git pull. De esta manera forma actualiza su repositorio con los cambios que le hicieron los compañeros del grupo.
 
 
 [X] --> OPCIONES CORRECTAS

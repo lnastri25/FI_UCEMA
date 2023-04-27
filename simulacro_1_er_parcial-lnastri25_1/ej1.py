@@ -6,7 +6,7 @@ import re
 
 def subsecuencias(string):
     patron = "X(b*ab.*?)Y"
-    return re.findall(patron,string)
+    return re.findal(patron,string)
 
 print(subsecuencias("XbaaaYjXababYqbabbbaaYqXffeeY"))
 
@@ -21,7 +21,7 @@ print(subsecuencias("XbaaaYjXababYqbabbbaaYqXffeeY"))
 
 # print(funcionDeExpresiones_Regulares('aabocaggaaactazu4lggaasag24gra1ndecta'))
 
-# A) El nombre de la función de Onomatopopih respeta las convenciones de nombres de Python. --> FALSO. No hay error de código, solamente que en Python se suele usar snake_case y acá se puede observar que hay una mezcla entre camelCase y snake_case. Además, hace falta pasarle un parámetro a la misma y no tiene un nombre expresivo la misma. De hecho, ya sabemos que es una función porque retorna algo --> entonces no hay que ponerle "funcionede..." --> es super amplio.
+# A) El nombre de la función de Onomatopopih respeta las convenciones de nombres de Python. --> FALSO. No hay error de código, solamente que en Python se suele usar snake_case y acá se puede observar que hay una mezcla entre camelCase y snake_case. Además, hace falta pasarle un parámetro a la función y no tiene un nombre expresivo la misma. De hecho, ya sabemos que es una función porque retorna algo, entonces no hay que ponerle "funcionede..." ya que es super amplio. Podríamos ponerle por ejemplo determinacion_de_patrones.
 
 # B) La función lanza NameError al ser ejecutada. --> FALSO. Un NameError ocurre cuando tratas de usar una variable o una funcion que no fue definida previamente. El error que ocurre es AtributeError porque findall está mal escrito (re.findal)
 
