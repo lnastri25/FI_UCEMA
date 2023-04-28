@@ -530,4 +530,3 @@ class Golondrina:
     
   def esta_feliz(self):
     return self.ciudad == "Lihuel Calel"
-    
