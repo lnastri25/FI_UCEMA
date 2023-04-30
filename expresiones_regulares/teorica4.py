@@ -124,13 +124,16 @@ print(re.sub(patron, "###", texto)) # Reemplaza ipsum por ###
 
 
 """
+
+flags=re.M --> da un valor de texto a cada línea. Lee cada línea por separado.
+
 1) Listado de caracteres para biblioteca RE:
 
 \n --> salto de linea.
 \t --> tab o cambio de pestaña.
-\s --> espacio.
+\s --> espacio en blanco. (espacio, tab, nueva línea)
 \s+ --> que tenga un espacio o más.
-\S --> que no tenga un espacio.
+\S --> que no tenga un espacio. ("todo menos los espacios en blanco)
 ' --> comillas simples.
 " --> comillas dobles.
 ^ --> inicio de línea.
@@ -143,7 +146,7 @@ $ --> fin de línea.
 ? --> cero o una vez. (puede estar o no estar)
 {n} --> exactamente n veces.
 {n,m} --> por lo menos n pero no más de m veces.
-\w --> caracter alfanumerico. (buscame palabras)
+\w --> caracter alfanumerico. (buscame palabras) (a-z, A-Z, 0-9, _)
 \W --> caracter no alfanumerico.
 \d --> caracter numerico. (buscame numeros)
 \D --> caracter no numerico.
