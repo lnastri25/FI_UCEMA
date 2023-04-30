@@ -126,6 +126,7 @@ print(re.sub(patron, "###", texto)) # Reemplaza ipsum por ###
 """
 
 flags=re.M --> da un valor de texto a cada línea. Lee cada línea por separado.
+flags=re.I --> ignora las mayúsculas o minúsculas.
 
 1) Listado de caracteres para biblioteca RE:
 
