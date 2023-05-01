@@ -7,13 +7,13 @@ import glob, re
 def filtrar(archivo):
     lista_txt = glob.glob("*txt")
 
-    with open(archivo, "a") as arch:
+    with open(archivo, "a") as miarch1:
         for archivo in lista_txt:
             with open(archivo, "r") as archivo_secreto:
                 texto = archivo_secreto.read()
                 lista = re.findall("[\W]+[-_\.]*[\W]+@gmail.com", texto)
                 for email in lista:
-                    arch.write(email + "\n")
+                    miarch1.write(email + "\n")
 
 """"
 gmail = r"\b[A-Za-z0-9._%+-]+@[gmail]+\.[A-Za-z]{2,}\b"

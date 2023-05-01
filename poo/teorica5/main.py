@@ -156,7 +156,7 @@ print("Parte 3:", roberta.esta_feliz())
 
     La excepción no solo aborta el método en el cual se produce sino también la ejecución de todos los métodos de la cadena de envío de mensajes y los posteriores, pero cuidado, porque no se descartan los cambios realizados anteriormente en caso de que los hubiera.
 
-    ej: raise Exception("string) --> suele venir después de un else.
+    ej: raise Exception("string") --> suele venir después de un else.
 
     Con el raise indicamos qué tipo de excepción queremos buscar; esto hace que terminemos la ejecución del programa.
 
