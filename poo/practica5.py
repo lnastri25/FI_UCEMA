@@ -184,6 +184,40 @@ calculadora.valorActual()
 
 # Ejercicio 7 #
 # Definí una clase de gorriones, de los cuales nos interesa conocer dos medidas conocidas como CSS (coeficiente de serenidad silenciosa), CSSP y CSSV (como el CSS pero “pico” y “veces”). El CSS resulta de dividir la cantidad total de kilómetros que vuela desde que se lo comienza a estudiar, por la cantidad total de gramos de comida que ingiere. El CSSP es la misma división pero considerando solamente lo que voló la vez que más voló y lo que comió la vez que más comió. El CSSV es otra vez la misma idea, respecto de la cantidad de veces que voló y comió. Si un gorrión nunca comió, los coeficientes deben ser None. Un gorrión se considera en equilibrio si su CSS está entre 0.5 y 2.
+
+class Gorrión:
+   
+  def __init__(self):
+      self.kilometro = []
+      self.gramos = []
+
+  def volar(self, km):
+        self.kilometro.append(km)
+      
+  def comer(self, gr):
+        self.gramos.append(gr)
+
+  def css(self):
+      if len(self.gramos) > 0: # if self.gramos != []
+        return sum(self.kilometro) / sum(self.gramos)
+      else:
+        return None
+      
+  def cssp(self):
+      if len(self.gramos) > 0: # if self.gramos != []
+        return max(self.kilometro) / max(self.gramos)
+      else:
+        return None
+      
+  def cssv(self):
+      if len(self.gramos) > 0: # if self.gramos != []
+        return len(self.kilometro) / len(self.gramos)
+      else:
+        return None
+      
+  def equilibrio(self):
+      return 0.5 <= self.css() <= 2
+
   
 "https://github.com/AJVelezRueda/Fundamentos_de_informatica/blob/master/POO/Practica/Pr%C3%A1ctica_Objetos_Parte_2.md" # --> GitHub
 
