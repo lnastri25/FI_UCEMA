@@ -13,8 +13,8 @@ Pasos:
 """
 import os, glob, sys
 
-def primeras_lineas(path_a_txt, path_resultado):
-    os.chidr(path_a_txt)
+def primeras_lineas(path_a_txt, path_resultado, salida):
+    os.chdir(path_a_txt)
     textos = glob.glob("*txt")
     primer_linea = []
     for txt in textos:
@@ -23,3 +23,9 @@ def primeras_lineas(path_a_txt, path_resultado):
 
     os.chdir("../../")
     os.mkdir(path_resultado)
+    os.chdir(path_resultado)
+    with open(salida, "a") as final_txt:
+        for linea in primer_linea:
+            final_txt.write(linea)
+
+primeras_lineas("datos/marzo", "resultado", "salida.txt")
