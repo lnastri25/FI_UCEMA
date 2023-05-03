@@ -13,6 +13,9 @@ Pasos:
 """
 import os, glob, sys
 
+#Primera opción:
+
+"""
 def primeras_lineas(path_a_txt, path_resultado, salida):
     os.chdir(path_a_txt)
     textos = glob.glob("*txt")
@@ -29,3 +32,6 @@ def primeras_lineas(path_a_txt, path_resultado, salida):
             final_txt.write(linea)
 
 primeras_lineas("datos/marzo", "resultado", "salida.txt")
+"""
+
+#Segunda opción:
