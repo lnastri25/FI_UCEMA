@@ -327,15 +327,22 @@ class Ornitologo:
 
   def avesEnEstudio(self):
     return self.aves
+  
+  def avesEnEquilibrio(self):
+    return [self.aves[i].estaEnEquilibrio() for i in range(len(self.aves))]
 
   def realizarRutinaSobreAves(self):
-    for ave in self.aves:
-      ave.comer_alpiste(80)
-      ave.volar(70)
-      ave.comer_alpiste(10)
+    [self.aves[i].comer(80) for i in range(len(self.aves))]
+    [self.aves[i].volar(70) for i in range(len(self.aves))]
+    [self.aves[i].comer(10) for i in range(len(self.aves))]
 
-  def avesEnEquilibrio(self):
-    return [ave for ave in self.aves if ave.esta_en_equilibrio()]
+"""
+ornitologo = Ornitologo()
+golodrina1 = Golondrina(80)
+golodrina2 = Golondrina(75)
+gorrion1 = Gorrion()
+gorrion2 = Gorrion()
+"""
     
 # Ejercicio 4 #
 # Vamos a salir de paseo (¡si la pandemia nos deja!). Para esto podemos utilizar como vehículos motos o autos, y de estos dos medios de transporte sabemos que:
