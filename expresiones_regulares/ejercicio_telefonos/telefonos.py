@@ -1,6 +1,6 @@
 #!bin/python3
 
-import re, os, glob, sys
+import re
 
 def encontrar_telefono(texto):
 
