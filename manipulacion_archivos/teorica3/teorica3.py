@@ -60,6 +60,7 @@ r: read --> abre un archivo solo para lectura.
 r+: read & write --> abre un archivo para escritura y lectura.
 a: append --> abre un archivo para agregar información. Si el archivo no existe, crea un nuevo archivo para escritura.
 w: write --> abre un archivo solo para escritura. Sobreescribre el archivo si este ya existe. Si el archivo no existe, crea un nuevo archivo para escritura.
+w+: --> sirve para escribir y leer en un archivo, y borrar lo que había antes.
 
 B) Cierre de archivos:
 archivo = open(path_al_archivo, modo)
@@ -75,6 +76,8 @@ with open(path_al_archivo, modo) as miarch:
     .read() Lee del archivo según el número de bytes de tamaño. Si no se pasa ningún, entonces lee todo el archivo.
     .readline() Lee como máximo el número de caracteres de tamaño de la línea. Esto continúa hasta el final de la línea y luego regresa.
     .readlines() Esto lee las líneas restantes del objeto de archivo y las devuelve como una lista. Cada elemento de la lista, es una línea del archivo.
+    .write(): escribe una cadena en un archivo.
+    .writelines(): escribe una lista de cadenas en un archivo.
 
 4) Para Python la escritura y la lectura son dos pasos por separado.
     ~: /Home/User
