@@ -59,6 +59,7 @@ if __name__ == "__main__":
     La razón técnica detrás de la utilización de convenciones de nomenclatura como camel case o snake case es que, al nombrar variables, funciones y otros elementos de código de manera consistente, se facilita la lectura y comprensión del código para otros programadores. Esto puede ser especialmente útil en proyectos grandes o en equipo, donde muchas personas trabajan en el mismo código.
     Además, seguir una convención de nomenclatura consistente puede ayudar a evitar errores y reducir el tiempo que se tarda en entender y modificar el código. Al utilizar una convención de nomenclatura clara y coherente, se hace más fácil identificar rápidamente qué hacen las variables y funciones, y cómo están relacionadas entre sí. En última instancia, esto puede ayudar a mejorar la calidad y eficiencia del código.
 
+---------------------------
 
     --> *Convención de Nomenclatura Consistente*:
     La convención de nomenclatura consistente se refiere al conjunto de reglas y prácticas que se siguen para nombrar variables, funciones y otros elementos de código en un proyecto de programación. La idea es establecer una forma coherente y uniforme de nombrar los elementos del código para que sea más fácil de leer, entender y mantener por los desarrolladores que trabajan en el proyecto.
@@ -67,7 +68,7 @@ if __name__ == "__main__":
 
 ---------------------------
 
---> *Estructura de codigo limpia:
+--> *Estructura de codigo limpia*:
 
     Legibilidad: Un código limpio es más fácil de leer y entender, no solo para uno mismo, sino también para otros programadores que puedan trabajar en el proyecto en el futuro. Si el código es difícil de entender, puede resultar en errores y problemas de mantenimiento.
 
