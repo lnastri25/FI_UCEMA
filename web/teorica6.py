@@ -37,7 +37,7 @@
         b) Servidor (Back-End):
         • El servidor procesa el pedido y responde a esa demanda del cliente. Siempre aporta algo (contenido, datos, etc.)
 
-            - Para que se cumpla esta relación tiene que, sí o sí, haber una comunicación entre Cliente y Servidor. Esta comunicación se hace a través de un protocolo.
+            - Para que se cumpla esta relación tiene que, sí o sí, haber una comunicación entre Cliente y Servidor. Para que la comunicación sea efectiva se necesita de un protocolo.
 
     - Esta comunicación ocurre a través de redes Intranets o la misma Internet, empleando un protocolo llamado HTTP, sobre el cuál hablaremos en el punto siguiente.
 
@@ -50,7 +50,7 @@
     - Los protocolos, como verás, forman parte de nuestras vidas más de lo que pensábamos. Y estos pueden variar según el entorno en el que nos movemos. Cada ámbito posee sus propias reglas para la comunicación. No nos expresamos de igual modo cuando estamos en un recital, que cuando estamos en la facultad ¿No?
 
         a) Protocolo:  
-        - Este conjunto de reglas de comunicación, implícitas o explícitas, se denomina protocolo y en Internet hay uno específico para establecer la comunicación entre servidores y clientes. 
+        - Este conjunto de reglas de comunicación, implícitas o explícitas, se denomina protocolo y en Internet hay uno específico para establecer la comunicación efectiva entre servidores y clientes. 
         - Este protocolo fue creado para la transferencia de archivos hipertextuales y se llama justamente HTTP, por las siglas en inglés de protocolo de transferencia de hipertexto (HyperText Transfer Protocol).
 
         - Este protocolo de comunicación empleado en la Web tiene ciertas características que debemos tener en cuenta:
