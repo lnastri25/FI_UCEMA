@@ -122,13 +122,11 @@
             https://www.mercadolibre.com.ar/
 
             “Http es el protocolo con el que yo me estoy comunicando al servidor de Mercado Libre”
-
-
+s
 10) URL:
 
     - Me dice el protocolo que voy a estar usando (HTTPS, 'S de secure') y el recurso que voy a estar usando.
 
-    
 11) Tipos de verbos:
 
     - Tiene al menos 4 verbos HTTP importantes --> disparan acciones particulares --> SIEMPRE HABLANDO de aplicaciones REST.
@@ -149,7 +147,6 @@
     d) Patch:
 
         - Es el verbo HTTP asociado a modificar/reescribir datos.
-
 
 x) Adicionales:
 
