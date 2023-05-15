@@ -32,10 +32,12 @@
 
         a) Cliente (Front-End):
         • Un cliente hace un pedido. El cliente siempre es el que consume y está demandando constantemente (contenido, datos, etc.)
-        • El cliente se encarga de presentar (renderizar) la respuesta al usuario final
+        • El cliente se encarga de presentar (renderizar/visualizar) la respuesta al usuario final.
+            --> Lenguajes utilizados: CSS y HTML.
 
         b) Servidor (Back-End):
         • El servidor procesa el pedido y responde a esa demanda del cliente. Siempre aporta algo (contenido, datos, etc.)
+            --> Lenguajes utilizados: Python.
 
             - Para que se cumpla esta relación tiene que, sí o sí, haber una comunicación entre Cliente y Servidor. Para que la comunicación sea efectiva se necesita de un protocolo.
 
@@ -55,12 +57,35 @@
 
         - Este protocolo de comunicación empleado en la Web tiene ciertas características que debemos tener en cuenta:
 
-            • Pedido-Respuesta: se abre una conexión por cada pedido, que surge del cliente, y el servidor la cierra cuando ha enviado la respuesta
+            • Pedido-Respuesta: se abre una conexión por cada pedido, que surge del cliente, y el servidor la cierra cuando ha enviado la respuesta. (El servidor jamás le hace un pedido al cliente)
 
-            • Stateless: el protocolo per-sé no maneja ninguna noción de memoria de pedidos anteriores
+            • Stateless: el protocolo per-sé no maneja ninguna noción de memoria de pedidos anteriores. 
+                - Esto quiere decir una vez que hay un pedido desde el cleinte, el servidor va a responder pero no hay memoria, es decir, que cierra la conexion después de cada pedido. Por lo tanto, NO puedo volver 3hs después y pedirle datos sobre el pedido que le había hecho anteriormente.
 
-            • Textual: se intercambian mensajes de sólo texto
+            • Textual: se intercambian mensajes de sólo texto.
+
+            • Basado en códigos de respuesta: incluso para los flujos de error; no hay memoria compartida, continuaciones, excepciones ni eventos.
+
+6) Presentación:
+
+    - De lo que dijimos anteriormente se desprende que la presentación o representación de los datos por el servidor corren por parte del cliente. Según lo vivenciado navegando en internet sabemos que las presentaciones son mucho más ricas e interactivas que simple texto. ¡Con el texto enviado por el servidor plano no nos alcanza!
+
+    - Lo que el servidor responde normalmente es el código fuente de una página escrita usando una combinación de lenguajes, que es interpretado por un programa del cliente, el mismo programa que también es responsable de crear las conexiones HTTP.
+
+    - ¿Saben cómo se llama esta aplicación? Adivinaron, ¡es el navegador (browser)!
+
+    - Los navegadores modernos son capaces de entender algunos lenguajes sin necesidad de ningún complemento (plugin), que son los que constituyen como el estándar la Web:
+
+        • HTML: lenguajes basado en etiquetas, emparentado con XML, diseñado para estructurar información.
+
+        • CSS: lenguaje para formatear información (estructurada en HTML).
+
+        • JavaScript: lenguaje de propósito general, que en los navegadores es utilizado para desarrollar cualquier lógica de aplicación. Este último nos permite entre otras cosas:
+
+            □ Mutar, acceder a, y observar eventos del DOM (la representación del contenido HTML).
+            □ Implementar efectos visuales complejos; Realizar pedidos al servidor en segundo plano.
+            □ Implementar navegabilidad del lado del cliente.
 
 
-
+    • El cliente va a renderizar la data que manda el servidor utilizando ciertas tecnologías (HTML, CSS, JavaScript).
 """
