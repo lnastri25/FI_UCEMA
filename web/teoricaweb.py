@@ -9,4 +9,5 @@ print(datos[0]["login"])
 # 3) Lista de nombres de las organizaciones en la que está involucrado ['TAREA']:
 
 print(respuesta)
-print(respuesta.headers) # --> Me da una información sobre el propio pedido. ¿Cuándo se hizo pedido?, ¿A qué servidor se hizo el pedido?
+print(respuesta.headers) # --> Me da una información sobre el propio request. ¿Cuándo se hizo request?, ¿A qué servidor se hizo el request?
+print(respuesta.status_code) # --> El status_code de esta operación fue 403.
