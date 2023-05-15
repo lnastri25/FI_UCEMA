@@ -243,7 +243,7 @@ print("Parte 3:", roberta.esta_feliz())
 
         b) se escriben con paréntesis en lugar de corchetes.
 
-    -  Las tuplas se utilizan en aquellos casos donde quisiéramos usar una lista pero ya sabemos de antemano cuántos y qué elementos va a tener.
+    - Las tuplas se utilizan en aquellos casos donde quisiéramos usar una lista pero ya sabemos de antemano cuántos y qué elementos va a tener.
 
     - El uso más común de las tuplas es cuando queremos retornar más de una cosa y sabemos exactamente cuántas.
 
