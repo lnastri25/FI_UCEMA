@@ -88,4 +88,33 @@
 
 
     • El cliente va a renderizar la data que manda el servidor utilizando ciertas tecnologías (HTML, CSS, JavaScript).
+
+7) Página Web:
+
+    - Un archivo HTML expuesto en la nube.
+    - Es algo más estático. 
+    - NO almacena (memoriza, guarda) información.
+
+8) Sitio Web:
+
+    - Conjunto de páginas web.
+    - Diferencia entre sitio y página: Son muchos archivos HTML interconectados.
+
+9) Aplicación Web:
+
+    - Tiene una base datos asociada y la lógica (el código) para procesar y manejar la información y almacenar datos.
+    - Persisto (almaceno) información en una base de datos.
+    - Ejemplo: Mercado Libre
+
+    a) Aplicacion Rest:
+        - Para que una aplicación sea rest, tiene que tener una url asociada a un recurso.
+
+10) URL:
+
+    - Me dice el protocolo que voy a estar usando (HTTPS, 'S de secure') y el recurso que voy a estar usando.
+
+x) Adicionales:
+
+    • Request --> pedido. La biblioteca 'requests' me permite hacer pedidos en Python.
+    
 """
