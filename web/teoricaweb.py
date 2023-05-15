@@ -10,4 +10,4 @@ print(datos[0]["login"])
 
 print(respuesta)
 print(respuesta.headers) # --> Me da una información sobre el propio request. ¿Cuándo se hizo request?, ¿A qué servidor se hizo el request?
-print(respuesta.status_code) # --> El status_code de esta operación fue 403.
+print(respuesta.status_code) # --> El status_code de esta operación fue 403 --> me dice como funcionó esa conexión. https://http.cat/
