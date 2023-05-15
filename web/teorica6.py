@@ -108,10 +108,34 @@
 
     a) Aplicacion Rest:
         - Para que una aplicación sea rest, tiene que tener una url asociada a un recurso.
+        - Los verbos HTTP disparan acciones particulares --> siempre hablando de apliaciones Rest.
 
 10) URL:
 
     - Me dice el protocolo que voy a estar usando (HTTPS, 'S de secure') y el recurso que voy a estar usando.
+
+    
+11) Tipos de verbos:
+
+    - Los verbos HTTP disparan acciones particulares (siempre hablando de apliaciones Rest),
+
+    a) Get:
+
+        - Es el verbo HTTP asociado a las consultas.
+        - El 'get' siempre lo hace el cliente; La magia de buscar la hace el servidor.
+
+    b) Post:
+
+        - Es el verbvo HTTP que está asociado a escribir o persistir datos (de cero).
+
+    c) Delete:
+
+        - Es el verbo HTTP asociado a borrar datos.
+
+    d) Patch:
+
+        - Es el verbo HTTP asociado a modificar/reescribir datos.
+
 
 x) Adicionales:
 
