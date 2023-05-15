@@ -110,6 +110,20 @@
         - Para que una aplicación sea rest, tiene que tener una url asociada a un recurso.
         - Los verbos HTTP disparan acciones particulares --> siempre hablando de apliaciones Rest.
 
+        ¿Cómo me doy que una aplicación es Rest?
+        
+        - Para que sea Rest una aplicación cada url distinta tiene que hacer referencia a un recurso en particular, recurso: un tipo de ítem de la base de datos. 
+            --> Ejemplos: Mercado Libre
+
+            - Cuando yo busco libros en el buscador, va a buscar todos los resultados en la base de datos de libros. https://listado.mercadolibre.com.ar/libros#D[A:libros]
+            - Cuando yo busco aros de plata en el buscador, va a buscar todos los resultados en la base de datos de aros de plata. 
+            https://listado.mercadolibre.com.ar/aros-de-plata#D[A:aros%20de%20plata]
+            
+            https://www.mercadolibre.com.ar/
+
+            “Http es el protocolo con el que yo me estoy comunicando al servidor de Mercado Libre”
+
+
 10) URL:
 
     - Me dice el protocolo que voy a estar usando (HTTPS, 'S de secure') y el recurso que voy a estar usando.
@@ -117,7 +131,7 @@
     
 11) Tipos de verbos:
 
-    - Los verbos HTTP disparan acciones particulares (siempre hablando de apliaciones Rest),
+    - Tiene al menos 4 verbos HTTP importantes --> disparan acciones particulares --> SIEMPRE HABLANDO de aplicaciones REST.
 
     a) Get:
 
@@ -140,5 +154,6 @@
 x) Adicionales:
 
     • Request --> pedido. La biblioteca 'requests' me permite hacer pedidos en Python.
-    
+    • JSON --> es como una estructura de diccionarios, que tiene sus 'keys' y sus 'values'.
+
 """
