@@ -1,5 +1,5 @@
 """
-## TIPOS DE ERRORES ##
+__TIPOS DE ERRORES__
 
 ## ERROR DE SINTAXIS ##
 
@@ -59,11 +59,13 @@ except:
 """
 
 # 🧗‍♀️Desafio II: Creá una función denominada eneavo que tenga como argumento un número e imprima el resultado de la división de 1 por ese número
+# Para pensar 🤔: ¿Qué crees que ocurrirá cuando ingresas un 9 como parámetro? ¿Y con un 0?
 
 def eneavo(numero):
     try:
         print(1 / numero)
     except ZeroDivisionError:
-        print("No se puede dividir por cero")
+        print("No se puede dividir por cero.")
 
-        
+eneavo(9)
+eneavo(0)
