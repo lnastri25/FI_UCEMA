@@ -38,9 +38,10 @@ def agregar(lista, numero):
         if numero > 0:
             lista.append(numero)
         else:
-            raise ValueError("El número no es positivo")
+            raise ValueError("El", numero, "no es positivo")
     except ValueError as error:
         print(error)
 
 lista = [1, 2, 3, 4, 5]
 agregar(lista, 6)
+print(lista)
