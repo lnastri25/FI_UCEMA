@@ -63,9 +63,9 @@ except:
 
 def eneavo(numero):
     try:
-        print(1 / numero)
+        print(1/numero)
     except ZeroDivisionError:
-        print("No se puede dividir por cero.")
+        print("No se puede dividir por", numero)
 
 eneavo(9)
 eneavo(0)

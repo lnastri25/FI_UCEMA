@@ -1,5 +1,4 @@
 """
-
 1) Internet:
 
     - Internet por más de que parezca mentira, es algo fisico. Es una conexion fisica ('cableada') entre todas las computadoras del mundo. Quizás una está en Movistar Argentina, pero la otra puede estar en T-Mobile USA. Cada vez, necesitamos que esa conexión sea mejor.
@@ -122,7 +121,7 @@
             https://www.mercadolibre.com.ar/
 
             “Http es el protocolo con el que yo me estoy comunicando al servidor de Mercado Libre”
-s
+
 10) URL:
 
     - Me dice el protocolo que voy a estar usando (HTTPS, 'S de secure') y el recurso que voy a estar usando.
