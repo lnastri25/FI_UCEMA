@@ -1,5 +1,5 @@
 """
-__TIPOS DE ERRORES__
+__TIPOS _DE_ERRORES__
 
 ## ERROR DE SINTAXIS ##
 
@@ -66,6 +66,20 @@ def eneavo(numero):
         print(1/numero)
     except ZeroDivisionError:
         print("No se puede dividir por", numero)
+    except TypeError:
+        print("El", numero, "es un string")
+        
+    print(numero)
 
-eneavo(9)
+eneavo("9")
 eneavo(0)
+
+"""
+## EXCEPCIONES PERSONALIZADAS ##
+
+En algunos casos, puede ser necesario crear excepciones personalizadas o forzar que ocurra una excepción específica dado un contexto. La sentencia raise, se puede indicar el tipo de excepción que deseamos lanzar y el mensaje de que queremos brindarle al usuario:
+
+def check_int_type():
+  if type(x)  != int:
+    raise TypeError("Only integers are allowed")
+"""
