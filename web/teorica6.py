@@ -212,10 +212,26 @@
             4) Deben mantener una jerarquía lógica
             5) Los filtrados de información de un recurso no se hacen en la URI
 
+13) Flask:
+
+    - Flask es un micro framework web, que nos permite la construcción de APIs y aplicaciones REST. Está diseñado para que empezar sea rápido y fácil, con la capacidad de escalar a aplicaciones complejas. Flask ofrece sugerencias, pero no impone dependencias ni diseño de proyecto.
+
+14) API:
+
+    - Tienen rutas ('endpoints') --> URL en las cuales se accede a los recursos.
+    - Se programan todas aquellas acciones que se desencadenan cuando un usuario accede a esos 'endpoints'.
+
+    a) Rutas:
+        - Nuestra aplicación Flask se compondrá de una o más rutas que expondrán los distintos recursos de nuestro sistema. Cada ruta nos dice, como mínimo dos cosas:
+        1) Bajo qué URL se expondrá el recurso
+        2) Qué se responderá cuando se lo acceda
+
+    b) Decordador:
+        - Ejemplo: @app.get("/")
+        - Le estoy diciendo a mi servidor que cuando alguien entre a la ruta '/' (la ruta principal), ejecute la función que viene a continuación.
 
 x) Adicionales:
 
     • Request --> pedido. La biblioteca 'requests' me permite hacer pedidos en Python.
     • JSON --> es como una estructura de diccionarios, que tiene sus 'keys' y sus 'values'.
-
 """
