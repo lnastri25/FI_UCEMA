@@ -137,13 +137,34 @@
         c) Recurso: 
             - Es lo que se almacena en la base de datos. Si quiero buscar aros de plata, pongo /aros.de.plata y eso se va a ir a buscar a la base de datos de la URL.
 
-                • url --> https://pokeapi.co/api/v2/pokemon/ditto/recurso
-                • https// --> protocolo
-                • pokeapi.co --> dominio
-                • /api/v2/pokemon/ditto --> ruta o path
-                • recurso--> es lo que se almacena en la base de datos. Si quiero buscar aros de plata, pongo /aros.de.plata y eso se va a ir a buscar a la base de datos de la URL.
+            - Me traigo todos los ítems asociados a ese recurso.
 
-                • La diferencia entre PATH y URL es que la url funciona buscando un recurso en una página a la cual accedo a traves de internet. Podríamos decir que son una especia de path via internet. En cambio, cuando hablamos de path, estoy accediendo de forma local y es la dirección exacta hacia un recurso o archivo en una computadora local.
+        d) Parámetros:
+            - Son los filtros que le voy a estar pasando a la base de datos. Si quiero buscar aros de plata, pongo /aros.de.plata y eso se va a ir a buscar a la base de datos de la URL. Si quiero buscar aros de plata de 1000 pesos, pongo /aros.de.plata?precio=1000&color=plata y eso se va a ir a buscar a la base de datos de la URL.
+
+            - Al /recurso, con un get, accedo a todos los items del recurso.
+
+            - Puedo acceder de todas maneras haciendo /recurso/id --> me traigo la fila('row') del item en donde está en la base de datos. Lo que hago con esto es acceder a un item en particular de este recurso.
+
+            - Me traigo un solo ítem particular asociado a ese recurso en particular.
+
+        e) Query Params:
+
+            - Filtro mediante la URL a que cosa voy a acceder a la base de datos de una API --> ?key=value (query params). Todo las claves que yo le paso a la api a través de la URL para filtrar la búsuqueda de la base de datos. 
+            
+            - El signo de pregunta ('?') me indica que a partir de ahí empiezan los parámetros. 
+            - Para concatenar los parámetros se uso el signo de ampersand ('&').
+
+        - Ejemplo: 'https://macowins-server.herokuapp.com/prendas?talle=40&tipo=pantalon'
+
+            • url --> 'https://macowins-server.herokuapp.com/prendas?talle=40&tipo=pantalon'
+            • https// --> protocolo
+            • macowins-server.herokuapp.com --> dominio
+            • prendas--> recurso
+            • ?talle=40&tipo=pantalon' --> parámetro (trame la prenda que tenga el talle igual a 40 y el tipo igual a pantalón)
+
+        • La diferencia entre PATH y URL es que la url funciona buscando un recurso en una página a la cual accedo a traves de internet. Podríamos decir que son una especia de path via internet. En cambio, cuando hablamos de path, estoy accediendo de forma local y es la dirección exacta hacia un recurso o archivo en una computadora local.
+
 11) Tipos de verbos:
 
     - Tiene al menos 4 verbos HTTP importantes --> disparan acciones particulares --> SIEMPRE HABLANDO de aplicaciones REST.
