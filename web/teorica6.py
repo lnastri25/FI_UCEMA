@@ -85,7 +85,6 @@
             □ Implementar efectos visuales complejos; Realizar pedidos al servidor en segundo plano.
             □ Implementar navegabilidad del lado del cliente.
 
-
     • El cliente va a renderizar la data que manda el servidor utilizando ciertas tecnologías (HTML, CSS, JavaScript).
 
 7) Página Web:
@@ -99,15 +98,18 @@
     - Conjunto de páginas web.
     - Diferencia entre sitio y página: Son muchos archivos HTML interconectados.
 
-9) Aplicación Web:
+9) API (Aplicación Web):
 
     - Tiene una base datos asociada y la lógica (el código) para procesar y manejar la información y almacenar datos.
     - Persisto (almaceno) información en una base de datos.
     - Ejemplo: Mercado Libre
 
-    a) Aplicacion Rest:
+    a) API REST (Aplicación Resst):
         - Para que una aplicación sea rest, tiene que tener una url asociada a un recurso.
         - Los verbos HTTP disparan acciones particulares --> siempre hablando de apliaciones Rest.
+        - Mapeo directo entre la URL y los recursos.
+        - Se espera que cuando uno le pega a una ruta en particular, con un verbo http en particular, desencadene una situacion en particular. Hay verbos asociadas a distintas URL's
+        - Para cada URL de una API rest, voy a tener ciertos verbos asociados. Depende de la url a la que yo le este pegando, voy a tener distintos verbos para usar. 
 
         ¿Cómo me doy que una aplicación es Rest?
         
@@ -139,6 +141,10 @@
 
             - Me traigo todos los ítems asociados a ese recurso.
 
+            - Para crear un ítem nuevo, le tengo que pegar a /recurso y sobre ese voy a hacer el 'post'.
+
+            - Un recurso es un objeto con datos asociados, relaciones con otros recursos y un conjunto de métodos que operan sobre él.
+
         d) Parámetros:
             - Son los filtros que le voy a estar pasando a la base de datos. Si quiero buscar aros de plata, pongo /aros.de.plata y eso se va a ir a buscar a la base de datos de la URL. Si quiero buscar aros de plata de 1000 pesos, pongo /aros.de.plata?precio=1000&color=plata y eso se va a ir a buscar a la base de datos de la URL.
 
@@ -149,7 +155,6 @@
             - Me traigo un solo ítem particular asociado a ese recurso en particular.
 
         e) Query Params:
-
             - Filtro mediante la URL a que cosa voy a acceder a la base de datos de una API --> ?key=value (query params). Todo las claves que yo le paso a la api a través de la URL para filtrar la búsuqueda de la base de datos. 
             
             - El signo de pregunta ('?') me indica que a partir de ahí empiezan los parámetros. 
@@ -170,21 +175,43 @@
     - Tiene al menos 4 verbos HTTP importantes --> disparan acciones particulares --> SIEMPRE HABLANDO de aplicaciones REST.
 
     a) Get:
-
         - Es el verbo HTTP asociado a las consultas.
         - El 'get' siempre lo hace el cliente; La magia de buscar la hace el servidor.
 
     b) Post:
-
         - Es el verbvo HTTP que está asociado a escribir o persistir datos (de cero).
+        - Cuando le pego a la URL, le tengo que pasar los datos. 
+        - Cada pedido HTTP, tiene asociado una metadata --> 'headers=headers'
 
     c) Delete:
-
         - Es el verbo HTTP asociado a borrar datos.
 
     d) Patch:
+        - Es el verbo HTTP asociado a modificar/reescribir 'una parte' de los datos.
 
-        - Es el verbo HTTP asociado a modificar/reescribir datos.
+    e) Put:
+        - Es el verbo HTTP a modificar 'todo'.
+
+12) Rest y sus URL's:
+
+    • Formalización de REST: REST es un tipo de arquitectura de desarrollo web que se basa en el uso correcto de URLs y HTPP. Organizaremos nuestras rutas, tanto de una API como de un sitio común y corriente, en forma de recursos y colecciones.
+
+        • GET /ventas/: consultar todos (listar)
+        • DELETE /ventas/: borrar todos
+        • POST /ventas/: crear uno
+        • POST /ventas/1 crear uno con ID (QMP no lo soporta)
+        • GET /ventas/1: consultar uno
+        • PUT /ventas/1: modificar uno
+        • DELETE /ventas/1: eliminar uno
+
+        a) Reglas básicas para escribir las rutas REST:
+
+            1) Debe evitarse usar verbos
+            2) No debemos tener más de una URI para identificar un mismo recurso
+            3) Deben ser independiente de formato
+            4) Deben mantener una jerarquía lógica
+            5) Los filtrados de información de un recurso no se hacen en la URI
+
 
 x) Adicionales:
 
