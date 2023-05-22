@@ -126,6 +126,24 @@
 
     - Me dice el protocolo que voy a estar usando (HTTPS, 'S de secure') y el recurso que voy a estar usando.
 
+    10.1) Partes de una URL:
+
+        a) Protocolo: 
+            - Sirve para conectarnos de una computadora a la otra. Para cada tipo de conexión que hagamos va a existir un protocolo en particular.
+
+        b) Dominio:
+            - Es como una especie de 'Nickname'. Es el nombre con el cual voy a mapear una IP en particular. Por detrás es una IP (código con el que puedo trackear una computadora en particular). Enmascara a la IP.
+
+        c) Recurso: 
+            - Es lo que se almacena en la base de datos. Si quiero buscar aros de plata, pongo /aros.de.plata y eso se va a ir a buscar a la base de datos de la URL.
+
+                • url --> https://pokeapi.co/api/v2/pokemon/ditto/recurso
+                • https// --> protocolo
+                • pokeapi.co --> dominio
+                • /api/v2/pokemon/ditto --> ruta o path
+                • recurso--> es lo que se almacena en la base de datos. Si quiero buscar aros de plata, pongo /aros.de.plata y eso se va a ir a buscar a la base de datos de la URL.
+
+                • La diferencia entre PATH y URL es que la url funciona buscando un recurso en una página a la cual accedo a traves de internet. Podríamos decir que son una especia de path via internet. En cambio, cuando hablamos de path, estoy accediendo de forma local y es la dirección exacta hacia un recurso o archivo en una computadora local.
 11) Tipos de verbos:
 
     - Tiene al menos 4 verbos HTTP importantes --> disparan acciones particulares --> SIEMPRE HABLANDO de aplicaciones REST.

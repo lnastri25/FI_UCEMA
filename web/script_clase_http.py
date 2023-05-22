@@ -8,23 +8,23 @@
 import requests
 
 respuesta = requests.get("https://pokeapi.co/api/v2/pokemon/ditto")
-
 datos = respuesta.json()
 
 # 1)
 # url --> https://pokeapi.co/api/v2/pokemon/ditto
-# https --> protocolo
+# https --> protocolo 
 # pokeapi.co --> dominio principal
 # /api/v2/pokemon/ditto --> ruta o path
 
 # 2) 
-# print(respuesta) # <Response [200]> --> 200 es el status code de la respuesta. 200 es que todo salió bien.
+# Me da por respuesta todos los recursos asociados al recurso 'ditto' con los detalles de todas las 'Keys' ('abilities', 'base_experience', 'forms', etc).
+# print(datos.keys())
 
 # 3)
-# print(respuesta.headers['Content-Type']) # --> El content type de esta url es: application/json; charset=utf-8
+# print(respuesta.headers['Content-Type']) # --> El content type de esta url es: application/json; charset=utf-8. 
 
 # 4)
-# print(respuesta.status_code) # --> El status code de esta url es: 200
+# print(respuesta.status_code) # --> El status code de esta url es: 200. Esto quiere decir que está todo OK.
 
 # 5) 
-# print(len(datos["abilities"])) # --> 2
+# print(f'Tiene {len(datos["abilities"])} habilidades') # --> 2
