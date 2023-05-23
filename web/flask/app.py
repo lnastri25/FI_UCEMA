@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, request, render_template
 
 prendas = [
     {"id": 1, "tipo": "pantalon", "talle": 42},
@@ -11,4 +11,10 @@ app = Flask(__name__) # Me refiero a la aplicación por la palabra app. App va a
 def home():
     return "<p>Te damos la bienvenida a MacoWins</p>"
 
-# TAREA: Armar la ruta /prendas que muestre todos los items de prendas. OPCIONAL: ESCRIBIR O AGREGAR UN ELEMENTO.
+# TAREA: Armar la ruta /prendas que muestre todos los items de prendas.
+@app.get("/prendas")
+def mostrar_prendas():
+    muestra = ""
+    for prenda in prendas:
+        muestra += f"Prenda {prenda['id']}: Tipo {prenda['tipo']}, Talle {prenda['talle']}<br>"
+    return muestra
