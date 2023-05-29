@@ -109,7 +109,8 @@
         - Los verbos HTTP disparan acciones particulares --> siempre hablando de apliaciones Rest.
         - Mapeo directo entre la URL y los recursos.
         - Se espera que cuando uno le pega a una ruta en particular, con un verbo http en particular, desencadene una situacion en particular. Hay verbos asociadas a distintas URL's
-        - Para cada URL de una API rest, voy a tener ciertos verbos asociados. Depende de la url a la que yo le este pegando, voy a tener distintos verbos para usar. 
+        - Para cada URL de una API rest, voy a tener ciertos verbos asociados. Depende de la url a la que yo le este pegando, voy a tener distintos verbos para usar.
+        - Soportan distintos verbos HTTP.
 
         ¿Cómo me doy que una aplicación es Rest?
         
@@ -218,6 +219,9 @@
 
 14) API:
 
+    - Es un software que suele estar del lado del servidor.
+    - Lo que hace la API es administrar los recursos de mi aplicación.
+    - Expone los recursos en los distintos endpoints (rutas).
     - Tienen rutas ('endpoints') --> URL en las cuales se accede a los recursos.
     - Se programan todas aquellas acciones que se desencadenan cuando un usuario accede a esos 'endpoints'.
 
@@ -229,9 +233,75 @@
     b) Decordador:
         - Ejemplo: @app.get("/")
         - Le estoy diciendo a mi servidor que cuando alguien entre a la ruta '/' (la ruta principal), ejecute la función que viene a continuación.
+        - Determina la ruta y el método.
+        - Arrancan con '@' siempre.
+
+15) Estructura del Proyecto Flask:
+
+    - La estructura de un proyecto Flask es muy simple. Flask no impone una estructura de proyecto, pero sí sugiere una. La estructura sugerida es la siguiente:
+
+    Flask (carpeta):
+    
+        • assets (carpeta): Acá irían todos los recursos extra (logo, styles, icon, img, data, etc).
+
+        • app.py (archivo): es el archivo principal de la aplicación. En él se crea la aplicación Flask y se definen las rutas. Acá tenemos los endpoints (rutas) de mi API.   
+
+        • templates (carpeta): es el directorio donde vamos a tener todas las plantillas HTML de mi aplicación. No están estáticas esas pantallas, sino que son dinámicas.
+
+        • static (carpeta): es el directorio donde vamos a tener los estilos de esas pantallas. Dentro de static voy a tener otra carpeta que se llame css y ahí voy a tener todo.
+
+            • css (carpeta)
+
+16) Tres tecnologías básicas de una API:
+
+    a) HTML:
+
+        - Para presentar los datos provenientes del servidor del lado del cliente, se utiliza HTML, que no es un lenguaje de programación, sino más bien un sitema de eqtiqueas que está pensado para mostrar contenido.
+        - HTML es un acrónimo de Hyper Text Markup Language, o lo que es lo mismo, Lenguaje de Marcado de Hyper Texto. El Hyper Texto tampoco es sólo texto… Entre los elementos del hiper texto podemos encontrar videos, imágenes, sonidos, etc.
+        - Es un "texto con hormonas".
+        - Nos va a permitir mandar información a partir del protocolo HTTP.
+        - Lenguaje basado en etiquetas.
+        - Me da la estructura básica sobre la que voy a renderizar la interfaz gráfica.
+
+            Un documento HTML está formado por partes o etiquetas de distintos tipos:
+
+                • Una línea que contiene información sobre la versión de HTML (no siempre),
+
+                • Una cabecera (delimitada por el elemento HEAD). <head></head> --> Todo lo que no se ve, pero me ayuda a renderizar la página. Está toda la metadata de la página.
+
+                • Un cuerpo, con el contenido del documento (delimitado por el elemento BODY). <body></body> --> Todo lo que se ve. Va a ir todo lo que quiero mostrar.
+
+            Y todo el documento tiene que ir entre las etiquetas <html></html> e inicia con la etiqueta <!DOCTYPE html>
+
+            
+        Listado de etiquetas:
+
+        <p> "texto" </p> --> párrafo
+        <h1> "texto" </h1> --> título
+        <a href="https://www.google.com.ar/"> "texto" </a> --> link
+        <img src="https://www.google.com.ar/"> --> imagen
+        <br> --> salto de línea
+        <div> "texto" </div> --> div
+        <ul> "texto" </ul> --> lista desordenada
+        <ol> "texto" </ol> --> lista ordenada
+
+        • Etiquetas semánticas --> permite tener un código más mantenible.
+
+    b) CSS:
+
+        - CSS es un lenguaje de diseño gráfico para definir y crear la presentación de un documento estructurado escrito en un lenguaje de marcado. Es muy usado para establecer el diseño visual de los documentos web, e interfaces de usuario escritas en HTML o XHTML.
+        - Decora y/o maquilla la base que puso HTML.
+
+    c) JavaScript:
+
+        - Es un lenguaje de programación que me permite hacer lógica de programación.
+        - Es lo dinámico sobre las estructuras maquilladas y/o decoradas. ('No puedo decirle a Alexa, abrime la puerta si no tengo puerta')
 
 x) Adicionales:
 
     • Request --> pedido. La biblioteca 'requests' me permite hacer pedidos en Python.
     • JSON --> es como una estructura de diccionarios, que tiene sus 'keys' y sus 'values'.
+    • Puerto -->  * Running on http://127.0.0.1:5000 --> En este caso estamos escuchando a la aplicación mediante el puerto '5000'.
+    • Status code --> El status_code de esta operación fue '403' --> me dice como funcionó esa conexión. https://http.cat/
+    • Las páginas web se renderizan en el navegador.
 """
