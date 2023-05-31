@@ -2,6 +2,7 @@ import requests # request = pedido
 
 respuesta = requests.get("https://api.github.com/users/ajvelezrueda/orgs")
 datos = respuesta.json()
+print(datos)
 # 1) En cuantas organizaciones está involucrado el usuario:
 # print(len(datos))
 # 2) En login sacamos la información del nombre del usuario:
