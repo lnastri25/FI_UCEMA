@@ -128,3 +128,4 @@ a.json()
 
 
 # d) En la arquitectura cliente-servidor ¿Qué características tiene el cliente?
+# --> El cliente es el que realiza la petición. En este caso, el cliente es el que realiza el pedido a la URL.
