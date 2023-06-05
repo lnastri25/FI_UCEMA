@@ -308,6 +308,14 @@
         - Sintáxis: elemento { color : blue}
         - Al elemento lo voy a referenciar con el 'elemento' o con el 'class name'
 
+        • Layout --> Hace referencia a dónde cada cosa. Y ese dónde cada cosa en relación a otras cosas. Es la disposición de las "cosas"
+        
+            a) Padding --> El padding en CSS es una propiedad o relleno que se crea alrededor del contenido de un elemento dentro de los bordes definidos y sirve para dar formato y diseño a una página web. 
+            
+            2 formas de hacer:
+            top, right, bottom, left --> aplica para padding, margin, border, etc.
+            top-bottom, right-left --> aplica para padding, margin, border, etc.
+
     c) JavaScript:
 
         - Es un lenguaje de programación que me permite hacer lógica de programación.
