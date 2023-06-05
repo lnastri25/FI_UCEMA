@@ -278,12 +278,21 @@
 
         <p> "texto" </p> --> párrafo
         <h1> "texto" </h1> --> título
-        <a href="https://www.google.com.ar/"> "texto" </a> --> link
-        <img src="https://www.google.com.ar/"> --> imagen
+        <a href="https://www.google.com.ar/"> "texto" </a> --> etiqueta para agregar enlaces
+        <img src="https://www.google.com.ar/"> --> etiqueta para agregar imágenes
         <br> --> salto de línea
         <div> "texto" </div> --> div
         <ul> "texto" </ul> --> lista desordenada
         <ol> "texto" </ol> --> lista ordenada
+        <li> "texto" </li> --> elemento de lista
+        <table> "texto" </table> --> tabla
+        <tr> "texto" </tr> --> fila
+        <td> "texto" </td> --> columna
+        <span> </span> == <div> </div>
+        <iframe> </iframe> --> Sirve para embeber posts o videos --> Son difíciles de pisar (el estilo).
+        <i> </i> --> Sirve para embeber íconos (favicons) --> formato .svg
+        <style> </style> --> me permite agregar código CSS adentro de HTML
+
 
         • Etiquetas semánticas --> permite tener un código más mantenible.
 
@@ -291,6 +300,13 @@
 
         - CSS es un lenguaje de diseño gráfico para definir y crear la presentación de un documento estructurado escrito en un lenguaje de marcado. Es muy usado para establecer el diseño visual de los documentos web, e interfaces de usuario escritas en HTML o XHTML.
         - Decora y/o maquilla la base que puso HTML.
+        - Todo lo que sea con estilos, se hace con CSS.
+        - NO se prorgama código CSS adentro de HTML.
+        - No opera contra el sistema operativo.
+        - Etiqueta → <link rel="stylesheet" href="style.css"> --> nos permite linkear el HTML con los archivos CSS(estilos), por lo tanto irá en el head porque es algo que no se debe ver.
+        - El codigo CSS se escribe entre {} y hace referencia a varios elementos del HTML.
+        - Sintáxis: elemento { color : blue}
+        - Al elemento lo voy a referenciar con el 'elemento' o con el 'class name'
 
     c) JavaScript:
 
@@ -304,4 +320,5 @@ x) Adicionales:
     • Puerto -->  * Running on http://127.0.0.1:5000 --> En este caso estamos escuchando a la aplicación mediante el puerto '5000'.
     • Status code --> El status_code de esta operación fue '403' --> me dice como funcionó esa conexión. https://http.cat/
     • Las páginas web se renderizan en el navegador.
+    • Hacer "HOVER" --> pasar por arriba del elemento
 """
