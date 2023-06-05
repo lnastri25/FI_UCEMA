@@ -4,7 +4,7 @@
 }
 
 h1 {
-    color: #16a7c0;
+    color: #3C2923;
     font-size: 50px;
     text-align: center;
     margin-top: 50px;
@@ -12,7 +12,7 @@ h1 {
 }
 
 .welcome {
-    background-color: #94adb0;
+    background-color: #674e48;
     padding: 50px;
     margin-bottom: 50px;
     border-radius: 10px;
@@ -26,7 +26,7 @@ h1 {
 }
 
 .welcome p:hover {
-    color: #c01654;
+    color: #000000;
 }
 
 .welcome img {
@@ -34,4 +34,161 @@ h1 {
     width: 100%;
     height: 100%;
     border-radius: 10px;
+}
+
+.welcome img:hover {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.about {
+    background-color: #5a4a45;
+    padding: 50px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.about p {
+    text-align: center;
+    font-size: 20px;
+    color: white
+}
+
+.about p:hover {
+    color: #000000;
+}
+
+.about li {
+    text-align: center;
+    font-size: 20px;
+    color: white
+}
+
+.about li:hover {
+    color: #000000;
+}
+
+.about iframe {
+    margin-left: auto;
+    border-radius: 10px;
+
+}
+
+.about iframe:hover {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.products {
+    background-color: #5a4a45;
+    padding: 50px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.products p {
+    text-align: center;
+    font-size: 20px;
+    color: white
+}
+
+.products p:hover {
+    color: #000000;
+}
+
+.products img {
+    margin-left: auto;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.products img:hover {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.products li {
+    text-align: center;
+    font-size: 20px;
+    color: white
+}
+
+.products li:hover {
+    color: #000000;
+}
+
+.contact {
+    background-color: #5a4a45;
+    padding: 50px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+.contact p {
+    text-align: center;
+    font-size: 20px;
+    color: white
+}
+
+.contact p:hover {
+    color: #000000;
+}
+
+.contact form {
+    text-align: center;
+    font-size: 20px;
+    color: white
+}
+
+.contact form:hover {
+    color: #000000;
+}
+
+.contact input {
+    border-radius: 10px;
+    border: 1px solid #5a4a45;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.contact input:hover {
+    border: 1px solid #000000;
+}
+
+.contact textarea {
+    border-radius: 10px;
+    border: 1px solid #5a4a45;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.contact textarea:hover {
+    border: 1px solid #000000;
+}
+
+.contact button {
+    border-radius: 10px;
+    border: 1px solid #5a4a45;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    background-color: #5a4a45;
+    color: white;
+}
+
+.contact button:hover {
+    border: 1px solid #000000;
+    background-color: #000000;
+}
+
+
+
+/* Path: web/flask_proyecto/static/css/login.css */
+
+* {
+    margin: 0;
+    padding: 0;
 }
