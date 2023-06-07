@@ -11,7 +11,8 @@
     right: -25px;
     width: 60px;
     height: 60px;
-    bottom: 95px;
+    bottom: 70px;
+    margin-top: -25px;
 }
 
 .arriba h1 {
@@ -32,19 +33,20 @@
     text-align: left;
     padding: 46.5px;
     border: 3px solid black; 
+    margin-top: -40px;
 }
 
 .middle img {
     position: relative;
-    right: -800px;
+    right: -700px;
     width: 400px;
     height: 200px;
-    bottom: 100px;
+    bottom: 80px;
 }
 
 .autor {
     background-color: #96F7D2;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Verdana', sans-serif;
     font-size: 20px;
     text-align: left;
     padding: 70px;
