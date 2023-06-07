@@ -1,3 +1,5 @@
+/* Path: web/flask_proyecto/static/css/home.css */
+
 * {
     margin: 0;
     padding: 0;
@@ -182,13 +184,4 @@ h1 {
 .contact button:hover {
     border: 1px solid #000000;
     background-color: #000000;
-}
-
-
-
-/* Path: web/flask_proyecto/static/css/login.css */
-
-* {
-    margin: 0;
-    padding: 0;
 }
