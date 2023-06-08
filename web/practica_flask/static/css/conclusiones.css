@@ -36,12 +36,10 @@
     margin-top: -40px;
 }
 
-.middle img {
+.middle ul {
     position: relative;
-    right: -700px;
-    width: 100px;
-    height: 100px;
-    bottom: 80px;
+    right: -50px;
+    margin-top: 40px;
 }
 
 .autor {
