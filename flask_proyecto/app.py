@@ -2,8 +2,8 @@ from flask import Flask, render_template
 from markupsafe import escape # Me permite trabajar con seguridad para que no me hackeen la API con código de JavaScript.
 
 prendas = [
-    {"id": 1, "tipo": "pantalon", "talle": 42},
-    {"id": 2, "tipo": "pantalon", "talle": 56}
+    {"id": 1, "type": "t-shirt", "size": "M"},
+    {"id": 2, "type": "t-shirt", "size": "L"}
 ]
 app = Flask(__name__) # Me refiero a la aplicación por la palabra app. App va a ser el nombre que le voy a estar dando a mi servidor.
 
