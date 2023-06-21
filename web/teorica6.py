@@ -329,4 +329,7 @@ x) Adicionales:
     • Status code --> El status_code de esta operación fue '403' --> me dice como funcionó esa conexión. https://http.cat/
     • Las páginas web se renderizan en el navegador.
     • Hacer "HOVER" --> pasar por arriba del elemento
+
+    • Position relative --> se va adaptando al container.
+    • Position absolute --> me despego del container.
 """
