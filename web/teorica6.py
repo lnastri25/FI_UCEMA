@@ -332,4 +332,20 @@ x) Adicionales:
 
     • Position relative --> se va adaptando al container.
     • Position absolute --> me despego del container.
+
+    ---------------- 
+x.1) Adicionales:
+
+La semántica hace referencia al significado de las palabras y/u oraciones. 
+La semántica en HTML se trata de usar las etiquetas correctas para cada elemento/sección de la pagina web. Algunas de las semánticas mas usadas son <section></section> y <figure></figure>
+
+Las etiquetas semánticas son las que organizan el contenido, pero no lo formatean\
+Las etiquetas no semánticas son las que formatean.
+Semanticas: <Head>, <p>, <div>, <footer>
+No semánticas: <strong>, <I>, <ul> etc.
+
+
+Pagina web  es HTML
+Sitio web son varios HTML
+Aplicacion web es tener un servidor
 """
