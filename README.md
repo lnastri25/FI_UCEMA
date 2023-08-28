@@ -1,4 +1,4 @@
-# Fundamentos de INF - Clases Teóricas y Prácticas
+# Fundamentos de Informática - Clases Teóricas y Prácticas
 
 <h4 align="left">Este repositorio contiene todas aquellas clases, tanto teóricas como prácticas, de la materia Fundamentos de Informática dictada en el 2do año de la "Licenciatura Analítica de Negocios" en la Universidad del CEMA.</h4>
 
